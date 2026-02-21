@@ -25,7 +25,7 @@ const ContactForm = () => {
       <div className="flex flex-col lg:flex-row xl:gap-20 sm:gap-10 gap-20 mb-20">
         <div className="xl:flex-[50%] flex-[30%]">
           <h1 className="uppercase font-medium mb-20 text-3xl">
-            Connect with zane systems
+            Connect with <span className="text-brand-navy">zane systems</span> 
           </h1>
 
           <div className="flex flex-col gap-5 border-r xl:w-120 md:w-90 w-full border-brand-navy-deep">
@@ -105,25 +105,26 @@ const ContactForm = () => {
             ></textarea>
 
             <div className="flex items-center justify-center">
-              <button
-                type="Submit"
-                className="bg-brand-navy px-6 w-fit py-3 text-white rounded-full cursor-pointer hover:scale-105 active:scale-95 transition-all duration-300 ease-in"
-              >
-                Send Message
-              </button>
+              <button type='Submit' className={`inline-flex items-center gap-3 font-outfit text-sm font-semibold tracking-wide text-white px-6 py-3 rounded-lg transition-all duration-300 hover:opacity-90 hover:-translate-y-0.5`}
+                    style={{ background: '#14516e' }}>
+                 Send Message               
+                <span className='text-base'>→</span></button>
             </div>
           </div>
 
           <div className="flex flex-col items-center justify-center">
-            <p className="mt-10 text-white">Or</p>
+            <p className="mt-5 text-white">Or</p>
             <hr className="text-white h-[0.5] w-10" />
-            <p className="mt-10 text-white text-center">
+            <p className="mt-5 text-white text-center">
               If you prefer, send us an email
             </p>
 
-            <button className="mt-5 border border-white px-6 py-3 rounded-full text-white w-fit cursor-pointer hover:scale-105 active:scale-95 transition-all duration-300 ease-in">
-              Send Us Email
-            </button>
+            
+               <button className={`inline-flex items-center gap-3 font-outfit text-sm font-semibold tracking-wide text-white px-6 py-3 rounded-lg transition-all duration-300 hover:opacity-90 hover:-translate-y-0.5 mt-5 border border-white/90`}
+            >
+                Send Mail          
+                <span className='text-base'>→</span></button>
+
           </div>
         </form>
       </div>

@@ -40,13 +40,13 @@ const WhatWeStandFor = () => {
   </div>
 
   {/* Title */}
-  <p className='font-ovo text-[#111827] text-lg mb-3'>{value.title}</p>
+  <p className='font-ovo text-brand-navy-deep text-lg mb-3'>{value.title}</p>
 
   {/* Divider */}
-  <div className='h-[1.5px] w-8 bg-[#14516e] rounded-full mb-4 transition-all duration-300' />
+  <div className='h-[1.5px] w-8 bg-brand-navy rounded-full mb-4 transition-all duration-300' />
 
   {/* Description */}
-  <p className='font-outfit text-sm text-[#323a40] leading-relaxed'>{value.description}</p>
+  <p className='font-outfit text-sm text-gray leading-relaxed'>{value.description}</p>
 
 </div>
 

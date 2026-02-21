@@ -16,14 +16,22 @@ const Hero = () => {
 
       
 
-        <div className='absolute  top-0 right-0 bottom-0  left-0 bg-black/50 ' />
+        <div className='absolute  top-0 right-0 bottom-0  left-0 bg-black/80 ' />
         <div className="absolute space-y-8 px-5 md:px-16 lg:px-20 bottom-50 z-0 w-full flex flex-col justify-center items-center">
-        <h1 className="md:text-4xl sm:text-3xl  text-white text-2xl text-center">
+
+              <div className='flex gap-3 items-center bg-glass rounded-full mb-5 px-4 py-2'>
+        <p className='size-3 bg-white rounded-full animate-ping'></p>
+        <h1 className='text-sm text-white'>Zane Systems Limited
+</h1>
+
+      </div>
+
+
+        <h1 className="text-white text-center text-2xl md:text-4xl mb-5">
           Your Global Partner in Aircraft Parts Supply
         </h1>
-        <p className="text-center text-xl text-white/80 font-ovo  sm:text-2xl">
-          From sourcing to delivery, we ensure aviation-grade excellence at
-          every stage.
+        <p className="text-white/80 text-center text-sm md:text-base sm:w-150 w-full">
+We deliver aircraft acquisition, certified parts sourcing, and seamless supply chain coordination for aviation stakeholders worldwide.
         </p>
         <button
           style={{ backgroundColor: "rgba(255, 255, 255, 0.12)" }}

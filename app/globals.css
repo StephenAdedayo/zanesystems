@@ -23,7 +23,7 @@
 }
 
 @theme{
- --color-glassed:        rgba(255, 255, 255, 0.55);
+   --color-glassed:        rgba(255, 255, 255, 0.55);
   --color-glass-bordered: rgba(255, 255, 255, 0.75);
   --color-glass-shadow: rgba(0, 0, 0, 0.06);
   --color-glass-border: rgba(255, 255, 255, 0.08);  /* border */

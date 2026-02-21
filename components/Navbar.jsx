@@ -113,7 +113,7 @@ const Navbar = () => {
 
       {/* mobile screens */}
       <div
-        className={`fixed top-0 h-screen right-0  ${menuOpen ? "w-full px-10 " : "w-0 overflow-hidden"} transition-all duration-300 bg-[#0d151c] z-50 block lg:hidden`}
+        className={`fixed top-0 h-screen right-0  ${menuOpen ? "w-full px-10 " : "w-0 overflow-hidden"} transition-all duration-300 bg-nav z-50 block lg:hidden`}
       >
         <h2 className="text-3xl text-white font-semibold uppercase text-center mt-20 mb-10">
           Zane Systems
@@ -133,7 +133,7 @@ const Navbar = () => {
           ))}
         </div>
 
-        <div className="bg-[#323a40] flex items-center gap-5 justify-center py-4 rounded-md mt-10">
+        <div className="bg-gray flex items-center gap-5 justify-center py-4 rounded-md mt-10">
           <FaPhoneAlt size={24} color="white" />
           <p className={`text-white`}>+234 8143184639</p>
         </div>

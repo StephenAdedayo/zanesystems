@@ -1,10 +1,13 @@
+import Cta from '@/components/Cta'
+import ServiceHero from '@/components/ServiceHero'
 import React from 'react'
 
 const Services = () => {
   return (
-    <div>
-      Services
-    </div>
+    <>
+        <ServiceHero />
+        <Cta />
+    </>
   )
 }
 

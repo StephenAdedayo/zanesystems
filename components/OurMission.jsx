@@ -1,10 +1,20 @@
 import { assets } from '@/assets/assets'
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
+import { MdKeyboardArrowRight } from 'react-icons/md'
 
 const OurMission = () => {
   return (
     <div className='px-5 md:px-16 lg:px-20 my-20'>
+
+         <div className="flex items-center gap-1 mb-20">
+        <Link href={"/"}>Home</Link>
+        <MdKeyboardArrowRight />
+        <Link href={"/about"} className="text-brand-navy">
+          About Us
+        </Link>
+      </div>
       
       <div className='flex items-center  gap-5 mb-10'>
            <hr className='h-[0.5] w-10 text-brand-navy-deep'/>

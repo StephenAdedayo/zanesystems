@@ -1,6 +1,7 @@
 import { assets } from '@/assets/assets'
 import Image from 'next/image'
 import React from 'react'
+import Button from './Button'
 
 const Whychoose = () => {
   return (
@@ -15,7 +16,8 @@ const Whychoose = () => {
         <h1 className='text-white'>WHY ZANE SYSTEMS LIMITED?</h1>
         <p className='text-white/60'>Zane Systems Limited operates as an independent aviation procurement and supply chain partner, delivering certified aircraft sourcing solutions through a trusted global supplier network.
          Our goal is to provide strategic, compliant, and efficient procurement services tailored to the operational needs of aviation stakeholders worldwide.</p>
-         <button className='border w-fit border-white text-white py-3 px-6 rounded-full hover:scale-105 active:scale-95 transition-all duration-300 ease-in'>Discover More</button>
+         {/* <button className='border w-fit border-white text-white py-3 px-6 rounded-full hover:scale-105 active:scale-95 transition-all duration-300 ease-in'>Discover More</button> */}
+         <Button href={"/about"} text={"Discover More"} className={"w-fit"}/>
      </div>
 
     </div>

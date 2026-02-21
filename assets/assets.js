@@ -19,6 +19,17 @@ import { IoDiamondOutline, IoShieldCheckmark } from 'react-icons/io5';
 import { CiGlobe } from 'react-icons/ci';
 import { AiOutlineUserSwitch } from 'react-icons/ai';
 import { IoMdTrendingUp } from 'react-icons/io';
+import service1 from "./service1.jpg"
+import service2 from "./service2.jpg"
+import service3 from "./service3.jpg"
+import service4 from "./service4.jpg"
+import service5 from "./service5.jpg"
+import service6 from "./service6.jpg"
+import service7 from "./service7.jpg"
+import service8 from "./service8.jpg"
+import service9 from "./service9.jpg"
+import service10 from "./service10.jpg"
+
 
 
 export const assets = {
@@ -38,7 +49,11 @@ export const assets = {
     pricing,
     trust,
     choose,
-    mission
+    mission,
+    service1,
+    service2,
+    service3,
+    service4
 }
 
 export const services = [
@@ -58,8 +73,7 @@ export const services = [
       "Risk assessment and cost optimization",
     ],
     images: [
-      "/images/services/aircraft-procurement-1.jpg",
-      "/images/services/aircraft-procurement-2.jpg",
+      service1, service2
     ],
     icon: "Plane",
     cta: "Learn More",
@@ -80,8 +94,8 @@ export const services = [
       "Urgent and AOG support coordination",
     ],
     images: [
-      "/images/services/parts-procurement-1.jpg",
-      "/images/services/parts-procurement-2.jpg",
+      service3,
+      service4
     ],
     icon: "Settings",
     cta: "Request Information",
@@ -102,8 +116,7 @@ export const services = [
       "Long-term partnership development",
     ],
     images: [
-      "/images/services/vendor-management-1.jpg",
-      "/images/services/vendor-management-2.jpg",
+      service5, service6
     ],
     icon: "Handshake",
     cta: "Partner With Us",
@@ -124,8 +137,8 @@ export const services = [
       "Supply chain risk mitigation",
     ],
     images: [
-      "/images/services/logistics-1.jpg",
-      "/images/services/logistics-2.jpg",
+            service7, service8
+
     ],
     icon: "Truck",
     cta: "Optimize Your Supply Chain",
@@ -146,8 +159,8 @@ export const services = [
       "Operational performance evaluation",
     ],
     images: [
-      "/images/services/consulting-1.jpg",
-      "/images/services/consulting-2.jpg",
+      service9, service10
+
     ],
     icon: "Briefcase",
     cta: "Speak With a Consultant",
