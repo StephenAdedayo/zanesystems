@@ -82,7 +82,7 @@ const Navbar = () => {
               background: isScrolled ? "#25D366" : "rgba(255, 255, 255, 0.12)",
             }}
           >
-            <BsWhatsapp  color="white" className="text-20 sm:text-24"/>
+            <BsWhatsapp color="white" className="text-20 sm:text-24" />
           </div>
         </a>
 
@@ -97,7 +97,7 @@ const Navbar = () => {
               background: isScrolled ? "#14516e" : "rgba(255, 255, 255, 0.12)",
             }}
           >
-            <FaPhoneAlt  color="white" className="text-20 sm:text-24"/>
+            <FaPhoneAlt color="white" className="text-20 sm:text-24" />
             <p
               className={`${!isScrolled && "font-semibold"} sm:block hidden md:text-sm text-base text-white`}
             >
@@ -106,7 +106,7 @@ const Navbar = () => {
           </div>
         </a>
 
-        <div onClick={() => setIsMenuOpen(true)} className="lg:hidden block">
+        <div onClick={() => setIsMenuOpen(true)} className="lg:hidden cursor-pointer block">
           <Menu size={24} color={`${isScrolled ? "black" : "white"}`} />
         </div>
       </div>
@@ -133,16 +133,18 @@ const Navbar = () => {
           ))}
         </div>
 
+       <a href="tel:+234 8143184639">
         <div className="bg-gray flex items-center gap-5 justify-center py-4 rounded-md mt-10">
           <FaPhoneAlt size={24} color="white" />
           <p className={`text-white`}>+234 8143184639</p>
         </div>
+        </a>
 
         <div
           onClick={() => setIsMenuOpen(false)}
-          className="absolute top-5 right-10"
+          className="absolute top-5 cursor-pointer right-10"
         >
-          <LiaTimesSolid size={30} color="white"/>
+          <LiaTimesSolid size={30} color="white" />
         </div>
       </div>
     </section>

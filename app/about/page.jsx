@@ -7,7 +7,7 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div>
+    <div className='bg-slate-100'>
         <AboutUsHero />
         <OurMission />
         <WhatWeStandFor />

@@ -29,6 +29,9 @@ import service7 from "./service7.jpg"
 import service8 from "./service8.jpg"
 import service9 from "./service9.jpg"
 import service10 from "./service10.jpg"
+import contact_image from "./contact_image.jpg"
+import about_image from "./about_image.jpg"
+import service from "./service.jpg"
 
 
 
@@ -53,120 +56,138 @@ export const assets = {
     service1,
     service2,
     service3,
-    service4
+    service4,
+    contact_image,
+    about_image,
+    service
 }
 
 export const services = [
   {
-    id: 1,
-    slug: "aircraft-procurement-services",
-    service: "Aircraft Procurement Services",
+    number: "01",
+    slug: "aircraft-procurement",
+    name: "Aircraft Procurement Services",
+    icon: "Plane",
+    tags: ["Sourcing", "Acquisition", "Due Diligence"],
     shortDescription:
-      "Strategic sourcing and acquisition support for aircraft operators and aviation stakeholders.",
+      "End-to-end aircraft acquisition support — from market analysis and vendor selection to negotiation, inspection, and delivery coordination.",
     details:
-      "Zane Systems Limited provides end-to-end aircraft procurement services designed to support airlines, private operators, and aviation investors. We manage the entire acquisition lifecycle — from market research and supplier identification to negotiation, compliance verification, and transaction coordination. Our approach ensures transparency, cost efficiency, and regulatory compliance at every stage of the procurement process.",
+      "Zane Systems Limited provides comprehensive aircraft procurement services tailored for airlines, private operators, charter companies, and aviation investors. We manage the complete acquisition lifecycle — from initial market research and aircraft sourcing to supplier evaluation, negotiation, regulatory compliance verification, and final delivery coordination. Our team leverages deep industry relationships and market intelligence to ensure you acquire the right aircraft at the right price, with full transparency and zero compromise on safety or compliance.",
     features: [
       "Market research and aircraft sourcing",
-      "Supplier evaluation and negotiation",
-      "Regulatory compliance verification",
+      "Supplier evaluation and price negotiation",
+      "Regulatory and airworthiness compliance verification",
       "Transaction and documentation coordination",
       "Risk assessment and cost optimization",
+      "Pre-purchase inspection management",
     ],
-    images: [
-      service1, service2
-    ],
-    icon: "Plane",
-    cta: "Learn More",
+    images: [service1, service2],
   },
   {
-    id: 2,
-    slug: "aircraft-parts-procurement-services",
-    service: "Aircraft Parts Procurement Services",
-    shortDescription:
-      "Certified aircraft components sourced through a trusted global supplier network.",
-    details:
-      "We specialize in sourcing high-quality, certified aircraft components to support maintenance, repair, and operational continuity. Leveraging a global network of trusted manufacturers and distributors, Zane Systems Limited ensures timely delivery, authenticity verification, and strict adherence to aviation industry standards.",
-    features: [
-      "Certified OEM and aftermarket parts sourcing",
-      "Global supplier network access",
-      "Authenticity and documentation verification",
-      "Cost-effective procurement strategies",
-      "Urgent and AOG support coordination",
-    ],
-    images: [
-      service3,
-      service4
-    ],
+    number: "02",
+    slug: "parts-procurement",
+    name: "Aircraft Parts Procurement Services",
     icon: "Settings",
-    cta: "Request Information",
+    tags: ["OEM Parts", "Aftermarket", "Certified"],
+    shortDescription:
+      "Globally sourced, fully certified aircraft components delivered with complete documentation and traceability for all major aircraft types.",
+    details:
+      "Zane Systems Limited sources and supplies OEM and aftermarket aircraft components to MRO facilities, airlines, and operators worldwide. Every part we procure is fully traceable, certified, and accompanied by complete airworthiness documentation. Our global supplier network and rigorous quality assurance process ensure that every component meets international aviation standards — whether you need a routine consumable or a critical line-replaceable unit. We handle the complexity of global sourcing so your operations stay on schedule.",
+    features: [
+      "OEM and aftermarket parts sourcing",
+      "Full traceability and airworthiness documentation",
+      "Multi-aircraft type coverage",
+      "Rigorous quality assurance and inspection",
+      "AOG priority sourcing and expedited delivery",
+      "Competitive pricing through global vendor network",
+    ],
+    images: [service3, service4],
   },
   {
-    id: 3,
-    slug: "vendor-supplier-management",
-    service: "Vendor & Supplier Management",
+    number: "03",
+    slug: "vendor-management",
+    name: "Vendor & Supplier Management",
+    icon: "Users",
+    tags: ["Vetting", "Compliance", "Auditing"],
     shortDescription:
-      "Building strong supplier partnerships to ensure reliability and performance.",
+      "We manage your entire supplier ecosystem — from initial vetting and qualification to performance monitoring and compliance audits.",
     details:
-      "Our vendor and supplier management services are designed to create stable, transparent, and performance-driven relationships across the aviation supply chain. We assess supplier capabilities, monitor compliance standards, and maintain strategic partnerships to ensure consistent quality and timely fulfillment.",
+      "Managing a reliable aviation supply chain requires more than just finding vendors — it demands continuous oversight, compliance enforcement, and performance evaluation. Zane Systems Limited offers a fully managed vendor and supplier management service, handling everything from initial qualification and onboarding to ongoing performance monitoring and regulatory audits. With access to our network of 500+ pre-approved global vendors, we give your organisation the confidence that every supplier in your chain meets the highest standards of quality, safety, and reliability.",
     features: [
-      "Supplier identification and onboarding",
-      "Performance monitoring and evaluation",
-      "Compliance and certification checks",
-      "Contract negotiation support",
-      "Long-term partnership development",
+      "Supplier identification and qualification",
+      "Vendor onboarding and compliance verification",
+      "Ongoing performance monitoring and KPI tracking",
+      "Regulatory and quality audit coordination",
+      "Supplier relationship management",
+      "Risk assessment and mitigation strategies",
     ],
-    images: [
-      service5, service6
-    ],
-    icon: "Handshake",
-    cta: "Partner With Us",
+    images: [service5, service6],
   },
   {
-    id: 4,
-    slug: "logistics-supply-chain-coordination",
-    service: "Logistics & Supply Chain Coordination",
+    number: "04",
+    slug: "logistics",
+    name: "Logistics & Supply Chain Coordination",
+    icon: "Globe",
+    tags: ["Global Shipping", "AOG Support", "Customs"],
     shortDescription:
-      "Efficient logistics planning to ensure seamless global delivery.",
+      "From warehouse to tarmac — we coordinate the full logistics chain including freight forwarding, customs clearance, and AOG emergency deliveries.",
     details:
-      "Zane Systems Limited coordinates logistics and supply chain operations to ensure aircraft components and assets are delivered safely and on time. From freight coordination and customs documentation to inventory planning and risk mitigation, we streamline complex supply chains for maximum efficiency.",
+      "Zane Systems Limited delivers end-to-end logistics and supply chain coordination services designed specifically for the demands of the aviation industry. We manage the full movement of aircraft parts and components — from origin warehouse to final destination — including international freight forwarding, customs clearance, dangerous goods handling, and AOG emergency response. Our logistics partnerships across four continents ensure that no matter where your aircraft is grounded or your facility is located, critical parts reach you with speed and reliability.",
     features: [
-      "Freight and shipment coordination",
-      "Customs and documentation management",
-      "Inventory planning and tracking",
-      "Global distribution support",
-      "Supply chain risk mitigation",
+      "International freight forwarding and routing",
+      "Customs clearance and import/export documentation",
+      "AOG emergency logistics and rapid response",
+      "Dangerous goods handling and compliance",
+      "Real-time shipment tracking and visibility",
+      "Last-mile delivery to MRO facilities and airports",
     ],
-    images: [
-            service7, service8
-
-    ],
-    icon: "Truck",
-    cta: "Optimize Your Supply Chain",
+    images: [service7, service8],
   },
   {
-    id: 5,
-    slug: "procurement-consulting",
-    service: "Procurement Consulting",
+    number: "05",
+    slug: "consulting",
+    name: "Procurement Consulting",
+    icon: "BarChart",
+    tags: ["Strategy", "Cost Reduction", "Process Audit"],
     shortDescription:
-      "Strategic advisory services to improve procurement efficiency and performance.",
+      "Strategic advisory for aviation procurement operations — reducing cost, improving lead times, and strengthening supplier relationships.",
     details:
-      "Our procurement consulting services help aviation organizations refine their sourcing strategies, reduce operational costs, and strengthen supplier relationships. We provide data-driven insights, process optimization guidance, and tailored solutions that align procurement operations with long-term business objectives.",
+      "Zane Systems Limited offers expert procurement consulting services for aviation organisations looking to optimise their supply chain strategy and reduce operational costs. Our consultants conduct in-depth audits of your existing procurement processes, identify inefficiencies and risks, and design tailored frameworks to improve performance across sourcing, supplier management, and logistics. Whether you are building a procurement function from the ground up or refining an existing one, our team brings the industry expertise and analytical rigour to drive measurable results.",
     features: [
-      "Procurement strategy development",
-      "Cost analysis and optimization",
-      "Process improvement recommendations",
-      "Supplier risk assessment",
-      "Operational performance evaluation",
+      "Procurement process audit and gap analysis",
+      "Supply chain strategy design and optimisation",
+      "Cost reduction and spend analysis",
+      "Supplier rationalisation and consolidation",
+      "Procurement policy and compliance framework",
+      "Training and capability building for procurement teams",
     ],
-    images: [
-      service9, service10
-
-    ],
-    icon: "Briefcase",
-    cta: "Speak With a Consultant",
+    images: [service9, service10],
   },
 ];
 
+
+export const reasons = [
+  {
+    icon: "⚡",
+    title: "AOG Rapid Response",
+    description:
+      "Aircraft on Ground situations cost thousands per hour. Our emergency sourcing team operates 24/7 to get critical parts to you as fast as humanly possible.",
+  },
+  {
+    icon: "🌐",
+    title: "Global Reach",
+    description:
+      "With supplier relationships across four continents and logistics partners in 80+ countries, no destination is out of reach for the Zane Systems network.",
+  },
+];
+
+export const checklist = [
+  "Full documentation and certification on every component",
+  "Direct access to 500+ globally approved vendors",
+  "AOG emergency response — 24 hours, 7 days, worldwide",
+  "Dedicated account manager for every client relationship",
+  "ISO 9001 certified quality management system",
+];
 
 
 export const coreValues = [

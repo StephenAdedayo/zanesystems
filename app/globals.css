@@ -1,274 +1,78 @@
 @import "tailwindcss";
 
-/*
- * ============================================================
- *  LUNAJETS — TAILWIND @theme CONFIGURATION
- *  Original brand colors + Elevated luxury design system
- * ============================================================
- */
-
-*{
+* {
   font-family: Outfit;
 }
 
 @keyframes glowBorder {
-  0%, 100% {
+  0%,
+  100% {
     border-color: rgba(255, 255, 255, 0.75);
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
   }
   50% {
     border-color: rgba(99, 102, 241, 0.7);
-    box-shadow: 0 0 16px rgba(99, 102, 241, 0.3), 0 4px 24px rgba(0, 0, 0, 0.06);
+    box-shadow:
+      0 0 16px rgba(99, 102, 241, 0.3),
+      0 4px 24px rgba(0, 0, 0, 0.06);
   }
 }
 
 @theme{
-   --color-glassed:        rgba(255, 255, 255, 0.55);
+  --color-glassed: rgba(255, 255, 255, 0.55);
   --color-glass-bordered: rgba(255, 255, 255, 0.75);
   --color-glass-shadow: rgba(0, 0, 0, 0.06);
-  --color-glass-border: rgba(255, 255, 255, 0.08);  /* border */
-  --color-glass-shine:  rgba(255, 255, 255, 0.18);  /* top highlight */
+  --color-glass-border: rgba(255, 255, 255, 0.08); /* border */
+  --color-glass-shine: rgba(255, 255, 255, 0.18); /* top highlight */
   --color-glass: rgba(255, 255, 255, 0.12);
-  --color-glassy : rgba(255, 255, 255, 0.4);
-  --color-nav : #0d151c;
-  --font-outfit : "Outfit", sans-serif;
-  --font-ovo : "Ovo", sans-serif;
-  --breakpoint-tablet : 900px;
+  --color-glassy: rgba(255, 255, 255, 0.4);
+  --color-nav: #0d151c;
+  --font-outfit: "Outfit", sans-serif;
+  --font-ovo: "Ovo", sans-serif;
+  --breakpoint-tablet: 900px;
+  --breakpoint-xs : 330px;
 
   /* Primary Navy — nav bar, headings, footer */
-  --color-brand-navy:          #14516e;   /* dark navy used in header/nav */
-  --color-brand-navy-deep:     #111827;
-  --color-gray : #323a40;   /* near-black used in footer bg */
+  --color-brand-navy: #14516e; /* dark navy used in header/nav */
+  --color-brand-navy-deep: #111827;
+  --color-gray: #323a40; /* near-black used in footer bg */
 
   /* Sky Blue — CTA buttons, rating stars, links */
-  --color-brand-blue:          #1e6fba;   /* primary action blue */
-  --color-brand-blue-light:    #4fa3e0;   /* lighter blue used in star ratings */
-  --color-brand-blue-soft:     #d6e9f8;   /* very light blue highlight/badge bg */
+  --color-brand-blue: #1e6fba; /* primary action blue */
+  --color-brand-blue-light: #4fa3e0; /* lighter blue used in star ratings */
+  --color-brand-blue-soft: #d6e9f8; /* very light blue highlight/badge bg */
 
-  /* Neutrals */
-  --color-brand-white:         #ffffff;
-  --color-brand-off-white:     #f7f8fa;   /* section background alternates */
-  --color-brand-grey-100:      #f0f2f5;   /* light grey section bg */
-  --color-brand-grey-200:      #e2e6ec;   /* borders, dividers */
-  --color-brand-grey-400:      #9aa3b0;   /* placeholder text, muted labels */
-  --color-brand-grey-600:      #5a6472;   /* secondary body text */
-  --color-brand-grey-800:      #2c3344;   /* primary body text */
-
-  /* Accent Gold — used subtly in luxury touches */
-  --color-brand-gold:          #c8a96e;   /* warm gold accent (logo mark) */
-
-  /* CTA / Form */
-  --color-brand-cta:           #1e6fba;   /* "Request quotes" button */
-  --color-brand-cta-hover:     #145394;   /* darker hover state */
-
-
-  /* ──────────────────────────────────────────────
-     ELEVATED LUXURY PALETTE
-     Modern upgrades — richer, gradient-ready,
-     designed for high-converting landing pages
-  ────────────────────────────────────────────── */
-
-  /* --- Deep Space Navy (upgraded primary) --- */
-  --color-luxury-midnight:     #0b0f1a;   /* richest dark — hero overlays */
-  --color-luxury-navy-950:     #0d1526;
-  --color-luxury-navy-900:     #111e38;   /* primary dark bg */
-  --color-luxury-navy-800:     #162444;
-  --color-luxury-navy-700:     #1e3260;
-  --color-luxury-navy-600:     #264080;
-
-  /* --- Sapphire Blue (elevated CTA & links) --- */
-  --color-luxury-sapphire-700: #1252a3;
-  --color-luxury-sapphire-600: #1a68c8;
-  --color-luxury-sapphire-500: #2b82e8;   /* primary interactive */
-  --color-luxury-sapphire-400: #60a5f8;
-  --color-luxury-sapphire-300: #93c4fc;
-  --color-luxury-sapphire-100: #deeeff;
-
-  /* --- Celestial Gold (luxury accent) --- */
-  --color-luxury-gold-900:     #7a5a1a;
-  --color-luxury-gold-700:     #a8782a;
-  --color-luxury-gold-500:     #d4a035;   /* primary gold accent */
-  --color-luxury-gold-400:     #e2b85a;
-  --color-luxury-gold-300:     #f0cf8a;
-  --color-luxury-gold-100:     #fdf3dc;
-
-  /* --- Platinum / Silver (premium neutrals) --- */
-  --color-luxury-platinum-900: #1c2030;
-  --color-luxury-platinum-800: #262d42;
-  --color-luxury-platinum-700: #374058;
-  --color-luxury-platinum-600: #4e5870;
-  --color-luxury-platinum-500: #6b7591;
-  --color-luxury-platinum-400: #9aa3bc;
-  --color-luxury-platinum-300: #c4cad8;
-  --color-luxury-platinum-200: #e0e4ed;
-  --color-luxury-platinum-100: #f2f4f8;
-  --color-luxury-platinum-50:  #f9fafc;
-
-  /* --- Champagne (warm ivory for premium sections) --- */
-  --color-luxury-champagne:    #faf5eb;
-  --color-luxury-ivory:        #fefdf8;
-  --color-luxury-cream:        #f8f3e8;
-
-  /* --- Slate Teal (modern freshness accent) --- */
-  --color-luxury-teal-700:     #0e5f6e;
-  --color-luxury-teal-500:     #1490a8;
-  --color-luxury-teal-400:     #2ab4cc;
-  --color-luxury-teal-200:     #a7e3ed;
-
-  /* ──────────────────────────────────────────────
-     SEMANTIC TOKENS
-     Use these in components for consistency
-  ────────────────────────────────────────────── */
-
-  /* Backgrounds */
-  --color-bg-hero:             var(--color-luxury-midnight);
-  --color-bg-section-dark:     var(--color-luxury-navy-900);
-  --color-bg-section-light:    var(--color-luxury-platinum-50);
-  --color-bg-card:             var(--color-brand-white);
-  --color-bg-card-dark:        var(--color-luxury-navy-800);
-
-  /* Text */
-  --color-text-primary:        var(--color-luxury-navy-900);
-  --color-text-secondary:      var(--color-brand-grey-600);
-  --color-text-muted:          var(--color-brand-grey-400);
-  --color-text-on-dark:        var(--color-brand-white);
-  --color-text-on-dark-muted:  var(--color-luxury-platinum-300);
-  --color-text-accent:         var(--color-luxury-gold-500);
-  --color-text-link:           var(--color-luxury-sapphire-500);
-
-  /* Borders */
-  --color-border-default:      var(--color-brand-grey-200);
-  --color-border-subtle:       var(--color-luxury-platinum-200);
-  --color-border-gold:         var(--color-luxury-gold-400);
-
-  /* Interactive */
-  --color-btn-primary-bg:      var(--color-luxury-sapphire-500);
-  --color-btn-primary-hover:   var(--color-luxury-sapphire-700);
-  --color-btn-secondary-bg:    var(--color-luxury-gold-500);
-  --color-btn-secondary-hover: var(--color-luxury-gold-700);
-  --color-btn-ghost-border:    var(--color-luxury-platinum-300);
-
-
-  /* ──────────────────────────────────────────────
-     GRADIENTS
-     The magic the original site is missing 🔥
-  ────────────────────────────────────────────── */
-
-  /* Hero — deep midnight navy to rich navy with subtle blue bleed */
-  --gradient-hero:
-    linear-gradient(
-      135deg,
-      #0b0f1a 0%,
-      #111e38 40%,
-      #162444 70%,
-      #1a3060 100%
-    );
+  --gradient-hero: linear-gradient(
+    135deg,
+    #0b0f1a 0%,
+    #111e38 40%,
+    #162444 70%,
+    #1a3060 100%
+  );
 
   /* Hero Overlay — sits on top of a photo for legibility */
-  --gradient-hero-overlay:
-    linear-gradient(
-      to bottom,
-      rgba(11, 15, 26, 0.75) 0%,
-      rgba(11, 15, 26, 0.30) 50%,
-      rgba(11, 15, 26, 0.80) 100%
-    );
-
-  /* Gold shimmer CTA button */
-  --gradient-cta-gold:
-    linear-gradient(
-      135deg,
-      #c8922a 0%,
-      #e2b85a 40%,
-      #d4a035 70%,
-      #a8782a 100%
-    );
-
-  /* Sapphire CTA button */
-  --gradient-cta-sapphire:
-    linear-gradient(
-      135deg,
-      #1252a3 0%,
-      #2b82e8 60%,
-      #1a68c8 100%
-    );
+  --gradient-hero-overlay: linear-gradient(
+    to bottom,
+    rgba(11, 15, 26, 0.75) 0%,
+    rgba(11, 15, 26, 0.3) 50%,
+    rgba(11, 15, 26, 0.8) 100%
+  );
 
   /* Card — glass dark */
-  --gradient-card-dark:
-    linear-gradient(
-      145deg,
-      rgba(22, 36, 68, 0.95) 0%,
-      rgba(13, 21, 38, 0.98) 100%
-    );
+  --gradient-card-dark: linear-gradient(
+    145deg,
+    rgba(22, 36, 68, 0.95) 0%,
+    rgba(13, 21, 38, 0.98) 100%
+  );
 
   /* Premium section background — very subtle */
-  --gradient-section-subtle:
-    linear-gradient(
-      180deg,
-      #f9fafc 0%,
-      #f0f4fa 100%
-    );
-
-  /* Stats bar / accent strip */
-  --gradient-accent-strip:
-    linear-gradient(
-      90deg,
-      #0b0f1a 0%,
-      #1e3260 50%,
-      #0b0f1a 100%
-    );
-
-  /* Sky — used for lighter decorative elements */
-  --gradient-sky:
-    linear-gradient(
-      160deg,
-      #deeeff 0%,
-      #f2f8ff 60%,
-      #ffffff 100%
-    );
-
-  /* Gold text shimmer (use with background-clip: text) */
-  --gradient-gold-text:
-    linear-gradient(
-      90deg,
-      #a8782a 0%,
-      #f0cf8a 40%,
-      #d4a035 70%,
-      #a8782a 100%
-    );
-
-
-  /* ──────────────────────────────────────────────
-     TYPOGRAPHY SCALE (bonus)
-  ────────────────────────────────────────────── */
-
-  --font-family-display:  'Playfair Display', 'Georgia', serif;
-  --font-family-body:     'Inter', 'Helvetica Neue', sans-serif;
-  --font-family-mono:     'JetBrains Mono', 'Courier New', monospace;
-
-
-  /* ──────────────────────────────────────────────
-     SHADOWS (luxury depth)
-  ────────────────────────────────────────────── */
+  --gradient-section-subtle: linear-gradient(180deg, #f9fafc 0%, #f0f4fa 100%);
 
   --shadow-card:
-    0 4px 24px rgba(11, 15, 26, 0.10),
-    0 1px 6px  rgba(11, 15, 26, 0.06);
+    0 4px 24px rgba(11, 15, 26, 0.1), 0 1px 6px rgba(11, 15, 26, 0.06);
 
   --shadow-card-hover:
-    0 12px 48px rgba(11, 15, 26, 0.18),
-    0 4px  16px rgba(11, 15, 26, 0.10);
+    0 12px 48px rgba(11, 15, 26, 0.18), 0 4px 16px rgba(11, 15, 26, 0.1);
 
-  --shadow-gold-glow:
-    0 0 24px rgba(212, 160, 53, 0.30),
-    0 0 6px  rgba(212, 160, 53, 0.15);
-
-  --shadow-sapphire-glow:
-    0 0 24px rgba(43, 130, 232, 0.28),
-    0 0 6px  rgba(43, 130, 232, 0.14);
-
-  --shadow-nav:
-    0 2px 20px rgba(11, 15, 26, 0.14);
-
+  --shadow-nav: 0 2px 20px rgba(11, 15, 26, 0.14);
 }
-
-

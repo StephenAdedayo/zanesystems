@@ -8,7 +8,7 @@ import Whychoose from "@/components/Whychoose"
 
 const Home = () => {
   return (
-    <>
+    <div>
       <Hero />
       <NextHero />
       <HomeServices />
@@ -17,7 +17,7 @@ const Home = () => {
       <Testimonials />
       <Cta />
 
-    </>
+    </div>
   )
 }
 
