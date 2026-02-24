@@ -5,6 +5,12 @@ import OurMission from '@/components/OurMission'
 import WhatWeStandFor from '@/components/WhatWeStandFor'
 import React from 'react'
 
+
+export const metadata = {
+  title: "About Us",
+  description: "Learn about the mission, operational precision, and leadership behind Zane Systems Limited.",
+};
+
 const About = () => {
   return (
     <div className='bg-slate-100'>
