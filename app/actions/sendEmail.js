@@ -10,8 +10,8 @@ export async function sendEmail(formData) {
 
   try {
     const { data, error } = await resend.emails.send({
-      from: 'Zane Systems <onboarding@resend.dev>',
-      to: ["alustephenadedayo@gmail.com"],
+      from: 'Zane Systems <info@zanesystemsgs.com>', 
+      to: ["info@zanesystemsgs.com"],
       reply_to: email,
       subject: `New Message from ${fullName}`,
 html: `<p>Name: ${fullName}</p><p>Email: ${email}</p><p>Message: ${message}</p>` 
