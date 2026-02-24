@@ -13,8 +13,8 @@ export async function sendEmail(formData) {
       from: 'Zane Systems <info@zanesystemsgs.com>', 
       to: ["info@zanesystemsgs.com"],
       reply_to: email,
-      subject: `New Message from ${fullName}`,
-html: `<p>Name: ${fullName}</p><p>Email: ${email}</p><p>Message: ${message}</p>` 
+     subject: `New Inquiry from ${fullName}`,  
+      html: `<p>Name: ${fullName}</p><p>Email: ${email}</p><p>Message: ${message}</p>` 
 });
 
     if (error) {
