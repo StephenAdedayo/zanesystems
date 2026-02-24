@@ -16,7 +16,7 @@ const Navbar = () => {
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Services", href: "/services" },
-    { name: "Contact Us", href: "contact" },
+    { name: "Contact Us", href: "/contact" },
   ];
 
   const handleScroll = () => {
@@ -71,7 +71,7 @@ const Navbar = () => {
       <div className="flex items-center gap-3">
         {/* whatspp link */}
         <a
-          href="https://wa.me/2348143184639" // Replace with your actual phone number
+          href="https://wa.me/2348132421458" // Replace with your actual phone number
           target="_blank"
           rel="noopener noreferrer"
           className="transition-all hover:scale-105 active:scale-95 duration-300 cursor-pointer"
@@ -88,7 +88,7 @@ const Navbar = () => {
 
         {/* phone number link */}
         <a
-          href="tel:+2348143184639"
+          href="tel:+2348132421458"
           className="cursor-pointer hover:scale-105 active:scale-95 transition-all duration-300 ease-in"
         >
           <div
@@ -101,7 +101,7 @@ const Navbar = () => {
             <p
               className={`${!isScrolled && "font-semibold"} sm:block hidden md:text-sm text-base text-white`}
             >
-              +234 8143184639
+              +234 8132421458
             </p>
           </div>
         </a>
@@ -133,10 +133,10 @@ const Navbar = () => {
           ))}
         </div>
 
-       <a href="tel:+234 8143184639">
+       <a href="tel:+234 8132421458">
         <div className="bg-gray flex items-center gap-5 justify-center py-4 rounded-md mt-10">
           <FaPhoneAlt size={24} color="white" />
-          <p className={`text-white`}>+234 8143184639</p>
+          <p className={`text-white`}>+234 8132421458</p>
         </div>
         </a>
 

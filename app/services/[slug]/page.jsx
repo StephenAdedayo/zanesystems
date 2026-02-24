@@ -38,7 +38,7 @@ useEffect(() => {
       <WhatsIncluded service={service}/>
       <OtherServices service={service}/>
     </div>
-  ) : <div>Loading</div>
+  ) : <div>Loading.....</div>
 }
 
 export default SingleService

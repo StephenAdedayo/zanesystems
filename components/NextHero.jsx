@@ -101,12 +101,13 @@ const NextHero = () => {
           </p>
         </div>
 
-        <div className="flex-[50%] overflow-hidden">
+        <div className="flex-[50%]  overflow-hidden">
           <Image
             src={assets.pricing}
             alt="next_hero"
             className="rounded-2xl hover:scale-105 transition-all ease-in duration-300 h-[70%]"
           />
+          
         </div>
       </div>
 

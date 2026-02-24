@@ -86,7 +86,7 @@ const Footer = () => {
               <h2 className="font-semibold  text-sm mb-5 ">Get in touch</h2>
               <div className="text-sm  space-y-2">
                 <p className="text-sm text-white/60 hover:text-white transition-colors">
-                  +234 8143184639
+                  +234 8132421458
                 </p>
                 <p className="text-sm text-white/60 hover:text-white transition-colors">
                   zanesystems@gmail.com

@@ -3,7 +3,7 @@ import Button from "./Button";
 
 const Cta = () => {
   return (
-    <div className="bg-[url(/supply.jpg)] h-[50vh] relative flex flex-col justify-center items-center  bg-no-repeat bg-center bg-cover px-5">
+    <div className="bg-[url(/cta.jpg)] h-[50vh] relative flex flex-col justify-center items-center  bg-no-repeat bg-center bg-cover px-5">
       <h1 className="text-white/80 z-1 text-center sm:text-2xl text-xl md:text-3xl mb-10">
         Ready to Strengthen Your Aviation Supply Chain?
       </h1>

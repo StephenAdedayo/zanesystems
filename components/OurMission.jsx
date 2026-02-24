@@ -7,7 +7,7 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 const OurMission = () => {
   return (
     <div className="px-5 md:px-16 lg:px-20 my-20">
-      <div className="flex items-center gap-1 mb-20">
+      <div className="flex items-center gap-1 mb-16">
         <Link href={"/"}>Home</Link>
         <MdKeyboardArrowRight />
         <Link href={"/about"} className="text-brand-navy">
