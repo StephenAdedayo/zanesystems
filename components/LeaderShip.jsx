@@ -46,7 +46,7 @@ const LeaderShip = () => {
 
           {/* Name tag on image */}
           <div className="absolute bottom-6 left-6">
-            <p className="font-ovo text-white text-2xl">James Adebisi</p>
+            <p className="font-ovo text-white text-2xl">Adebisi Akinyemi</p>
             <p className="font-outfit text-xs text-indigo-400 tracking-widest uppercase mt-1">
               Founder & CEO
             </p>

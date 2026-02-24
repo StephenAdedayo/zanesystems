@@ -11,7 +11,7 @@ const ContactHero = () => {
         <Image src={assets.contact_image} fill priority alt="contact_image" className="object-center object-cover"/>
      </div>
 
-      <div className="bg-black/80 absolute inset-0 flex flex-col items-center justify-center ">
+      <div className="bg-black/80 absolute px-5 md:px-16 lg:px-20 inset-0 flex flex-col items-center justify-center ">
         <div className="flex gap-3 items-center bg-glass rounded-full mb-5 px-4 py-2">
           <p className="size-3 bg-white rounded-full animate-ping"></p>
           <h1 className="text-sm text-white">Contact Zane Systems Limited</h1>

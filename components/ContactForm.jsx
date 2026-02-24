@@ -67,7 +67,7 @@ const ContactForm = () => {
             </a>
 
             <a
-              href="mailto:zanesystemslimited@gmail.com"
+              href="mailto:info@zanesystemsgs.com"
               className="flex items-center gap-4 text-gray hover:text-brand-navy transition-colors duration-200">
               <div
                 className="w-10 h-10 rounded-lg flex items-center justify-center shrink-0"
@@ -77,7 +77,22 @@ const ContactForm = () => {
               </div>
               <div>
                 <p className="text-[0.65rem] font-semibold tracking-widest uppercase text-brand-navy mb-0.5">Email</p>
-                <p className="font-outfit text-sm font-medium">zanesystemslimited@gmail.com</p>
+                <p className="font-outfit text-sm font-medium">info@zanesystemsgs.com</p>
+              </div>
+            </a>
+
+                        <a
+              href="mailto:a.akinyemi@zanesystemsgs.com"
+              className="flex items-center gap-4 text-gray hover:text-brand-navy transition-colors duration-200">
+              <div
+                className="w-10 h-10 rounded-lg flex items-center justify-center shrink-0"
+                style={{ background: "rgba(20,81,110,0.08)", border: "1px solid rgba(20,81,110,0.15)" }}
+              >
+                <VscMail size={17} color="#14516e" />
+              </div>
+              <div>
+                <p className="text-[0.65rem] font-semibold tracking-widest uppercase text-brand-navy mb-0.5">Email</p>
+                <p className="font-outfit text-sm font-medium">a.akinyemi@zanesystemsgs.com</p>
               </div>
             </a>
           </div>

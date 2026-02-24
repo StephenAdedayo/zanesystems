@@ -88,9 +88,22 @@ const Footer = () => {
                 <p className="text-sm text-white/60 hover:text-white transition-colors">
                   +234 8132421458
                 </p>
-                <p className="text-sm text-white/60 hover:text-white transition-colors">
-                  zanesystems@gmail.com
+
+               <p>
+                <a href="mailto:info@zanesystemsgs.com?subject=Inquiry%20about%20Zane%20Systems%20Services&body=Hello%20Adebisi,%20I%20would%20like%20to%20discuss..." className="text-sm text-white/60 hover:text-white transition-colors">
+              info@zanesystemsgs.com
+ </a>
+                </p> 
+
+                <p>
+<a href="mailto:a.akinyemi@zanesystemsgs.com?subject=Inquiry%20about%20Zane%20Systems%20Services&body=Hello%20Adebisi,%20I%20would%20like%20to%20discuss..." className="text-sm text-white/60 hover:text-white transition-colors">
+a.akinyemi@zanesystemsgs.com               
+ </a>
                 </p>
+
+ 
+
+  
               </div>
             </div>
           </div>

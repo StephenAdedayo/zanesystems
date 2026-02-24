@@ -142,7 +142,7 @@ const Navbar = () => {
 
         <div
           onClick={() => setIsMenuOpen(false)}
-          className="absolute top-5 cursor-pointer right-10"
+          className="absolute top-5 cursor-pointer right-8"
         >
           <LiaTimesSolid size={30} color="white" />
         </div>

@@ -126,7 +126,7 @@ const onSubmitHandler = async (e) => {
           </div>
 
           {/* Email alt */}
-<a href="mailto:alustephenadedayo@gmail.com?subject=Inquiry%20about%20Zane%20Systems%20Services&body=Hello%20Stephen,%20I%20would%20like%20to%20discuss..."  >        <button
+<a href="mailto:info@zanesystemsgs.com?subject=Inquiry%20about%20Zane%20Systems%20Services&body=Hello%20Adebisi,%20I%20would%20like%20to%20discuss..."  >        <button
             type="button"
             className="w-full font-outfit text-sm font-semibold tracking-wide py-3.5 rounded-xl transition-all duration-300 hover:-translate-y-0.5 cursor-pointer"
             style={{
