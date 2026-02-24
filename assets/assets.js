@@ -1,19 +1,8 @@
-import close_black from './close-black.png';
-import close_white from './close-white.png';
-import arrow_icon from './arrow-icon.png';
-import arrow_icon_dark from './arrow-icon-dark.png';
-import menu_black from './menu-black.png';
-import menu_white from './menu-white.png';
-import right_arrow_white from './right-arrow-white.png';
-import right_arrow from './right-arrow.png';
-import send_icon from './send-icon.png';
-import right_arrow_bold from './right-arrow-bold.png';
-import right_arrow_bold_dark from './right-arrow-bold-dark.png';
-import nexthero_image from "./nexthero_image.jpg"
-import pricing from "./pricing.jpg"
-import trust from "./trust.jpg"
-import choose from "./choose.jpg"
-import mission from "./mission.jpg"
+import nexthero_image from "./nexthero_image.webp"
+import pricing from "./pricing.webp"
+import trust from "./trust.webp"
+import choose from "./choose.webp"
+import mission from "./mission.webp"
 import { MdHexagon } from 'react-icons/md';
 import { IoDiamondOutline, IoShieldCheckmark } from 'react-icons/io5';
 import { CiGlobe } from 'react-icons/ci';
@@ -29,25 +18,14 @@ import service7 from "./service7.jpg"
 import service8 from "./service8.jpg"
 import service9 from "./service9.jpg"
 import service10 from "./service10.jpg"
-import contact_image from "./contact_image.jpg"
-import about_image from "./about_image.jpg"
-import service from "./service.jpg"
+import contact_image from "./contact_image.webp"
+import about_image from "./about_image.webp"
+import service from "./service.webp"
 
 
 
 export const assets = {
     airplane:"/airplane.mp4",
-    close_black,
-    close_white,
-    arrow_icon,
-    arrow_icon_dark,
-    menu_black,
-    menu_white,
-    right_arrow_white,
-    right_arrow_bold,
-    right_arrow_bold_dark,
-    right_arrow,
-    send_icon,
     nexthero_image,
     pricing,
     trust,
