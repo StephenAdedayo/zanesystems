@@ -16,10 +16,10 @@ const HomeContact = () => {
 
       <div className="flex flex-col xl:gap-20 gap-10 tablet:flex-row">
         <div className="flex flex-col tablet:flex-[40%] gap-5 text-center tablet:text-left">
-          <h2 className="bg-linear-to-r from-slate-800 to-slate-500 text-transparent bg-clip-text text-2xl">
+          <h2 className="bg-linear-to-r from-slate-800 to-slate-500 text-transparent bg-clip-text text-lg">
             Reliable Aviation Solutions Begin Here
           </h2>
-          <p className="text-gray text-sm  xl:text-base">
+          <p className="text-gray text-sm md:text-[15px]">
             Partner with a team dedicated to strategic procurement, certified
             sourcing, and global supply coordination built around your
             operational goals.

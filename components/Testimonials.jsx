@@ -14,7 +14,7 @@ const Testimonials = () => {
              </div>
 
                 <h1
-                    className="text-3xl font-medium bg-linear-to-r from-slate-800 to-slate-500 text-transparent text-center bg-clip-text mt-4">
+                    className="text-2xl font-medium bg-linear-to-r from-slate-800 to-slate-500 text-transparent text-center bg-clip-text mt-4">
                     Don't just take our words
                 </h1>
                 <p className="text-slate-500 text-center mt-4 max-w-2xl">

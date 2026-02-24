@@ -33,7 +33,7 @@ const ServiceOverview = ({service}) => {
       style={{ background: "#0d151c" }}
     >
       <Image
-        src={service.images[0]}
+        src={service.images[1]}
         alt={service.name}
         fill
         className="object-cover"

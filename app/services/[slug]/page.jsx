@@ -37,7 +37,8 @@ useEffect(() => {
       <WhatsIncluded service={service}/>
       <OtherServices service={service}/>
     </div>
-  ) : <div>Loading.....</div>
+  ) : <div className='loader flex items-center justify-center'></div>
 }
+
 
 export default SingleService

@@ -24,7 +24,7 @@ const SingleServiceHero = ({service}) => {
 
   {/* Dot grid texture */}
   <div
-    className="absolute inset- pointer-events-none"
+    className="absolute inset-0 pointer-events-none"
     style={{
       backgroundImage: "radial-gradient(rgba(255,255,255,0.04) 1px, transparent 1px)",
       backgroundSize: "32px 32px",
@@ -53,7 +53,7 @@ const SingleServiceHero = ({service}) => {
         borderColor: "rgba(20,81,110,0.45)",
       }}
     >
-      <span className="w-1.5 h-1.5 rounded-full bg-indigo-400" />
+      <span className="w-1.5 h-1.5 animate-ping rounded-full bg-indigo-400" />
       Aviation Service
     </div>
 

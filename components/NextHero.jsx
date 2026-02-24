@@ -8,15 +8,15 @@ const NextHero = () => {
       <div className="flex md:items-center flex-col justify-center gap-3 mb-10">
         <div className="flex items-center  gap-5 mb-5">
         <hr className="h-[0.5] w-10 text-brand-navy-deep" />
-        <p className="text-brand-navy text-[0.65rem] font-semibold tracking-[0.2em] uppercase">
+        <p className="text-brand-navy text-[0.65rem] font-semibold md:tracking-[0.2em] uppercase tracking-widest">
           Global Aviation Procurement Experts
         </p>
       </div>
-      <p className="text-2xl md:text-center text-justify ">
+      <p className="text-lg md:text-center text-justify ">
           Strategic. Certified. <span className="text-brand-navy">Reliable.</span>{" "}
         </p>
 
-                <p className="md:text-center text-justify    text-base text-gray-700/90">
+                <p className="md:text-center text-justify  text-sm text-gray-700/90">
           Zane Systems Limited provides expert aircraft procurement and  {" "}
           certified <br /> parts sourcing, ensuring efficient and reliable supply chain
           solutions worldwide.
@@ -36,7 +36,7 @@ const NextHero = () => {
           />
         </div>
 
-        <div className="flex flex-col gap-8 flex-[50%]">
+        <div className="flex flex-col md:gap-8 gap-6 flex-[50%]">
           <div className="flex items-center justify-between gap-2 text-indigo-600 bg-indigo-50 rounded-full px-3 py-1 text-center w-fit">
             <svg
               width="13"
@@ -72,7 +72,7 @@ const NextHero = () => {
 
       {/* next image */}
       <div className="flex flex-col-reverse md:flex-row justify-between gap-10 mt-10 items-center">
-        <div className="flex flex-col gap-8 flex-[50%]">
+        <div className="flex flex-col md:gap-8 gap-6 flex-[50%]">
           <div className="flex items-center justify-between gap-2 text-indigo-600 bg-indigo-50 rounded-full px-3 py-1 text-center w-fit">
             <svg
               width="13"
@@ -121,7 +121,7 @@ const NextHero = () => {
           />
         </div>
 
-        <div className="flex flex-col gap-8 flex-[50%]">
+        <div className="flex flex-col md:gap-8 gap-6 flex-[50%]">
           <div className="flex items-center justify-between gap-2 text-indigo-600 bg-indigo-50 rounded-full px-3 py-1 text-center w-fit">
             <svg
               width="13"
