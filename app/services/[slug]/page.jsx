@@ -9,16 +9,6 @@ import { useParams } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
 
 
-export async function generateMetadata({ params }) {
-  const slug = params.slug;
-  // This turns "aircraft-parts" into "Aircraft Parts"
-  const formattedTitle = slug.charAt(0).toUpperCase() + slug.slice(1).replace(/-/g, ' ');
-
-  return {
-    title: `${formattedTitle}`,
-    description: `Expert ${formattedTitle} services tailored for global aviation stakeholders.`,
-  };
-}
 
 const SingleService = () => {
 
