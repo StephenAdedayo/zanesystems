@@ -49,8 +49,21 @@ export default function RootLayout({ children }) {
                 <Navbar />
          <main className="min-h-screen">
           {children}
+
          </main>
         <Footer />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "Zane Systems",
+              "url": "https://zanesystemsgs.com/"
+            }),
+          }}
+        />
       </body>
     </html>
   );
