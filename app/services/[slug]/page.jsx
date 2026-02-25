@@ -37,7 +37,10 @@ useEffect(() => {
       <WhatsIncluded service={service}/>
       <OtherServices service={service}/>
     </div>
-  ) : <div className='loader flex items-center justify-center'></div>
+
+  ) : <div className='flex justify-center items-center h-screen w-full'>
+         <div className='loader'></div>
+  </div> 
 }
 
 
