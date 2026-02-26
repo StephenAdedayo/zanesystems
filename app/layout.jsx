@@ -70,7 +70,7 @@ export default function RootLayout({ children }) {
       "@type": "Organization",
       name: "Zane Systems Limited",
       url: "https://zanesystemsgs.com",
-      "logo": "https://zanesystemsgs.com/favicon.ico",
+      logo: "https://zanesystemsgs.com/favicon.ico",
       address: {
         "@type": "PostalAddress",
         addressCountry: "NG",
@@ -84,7 +84,7 @@ export default function RootLayout({ children }) {
 
       {
     "@type": "ContactPoint",
-    telephone: "+234-814-318-4639",
+    telephone: "+234 8132421458",
     contactType: "sales",
     email: "info@zanesystemsgs.com",
   }
