@@ -1,9 +1,13 @@
+// "use client"
+
+import { motion } from 'motion/react'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
+
 const SingleServiceHero = ({service}) => {
-  return service ?  (
+  return   (
 <section className="relative min-h-[90vh] flex items-end overflow-hidden">
 
   {/* Background image */}
@@ -36,17 +40,24 @@ const SingleServiceHero = ({service}) => {
   <div className="relative w-full px-5 lg:px-20 md:px-16 pb-20 pt-36">
 
     {/* Breadcrumb */}
-    <div className="flex items-center gap-2 mb-8 text-xs font-outfit"
+    <motion.div 
+            initial={{y: -30, opacity : 0}}
+         animate={{ y: 0, opacity: 1 }} 
+            transition={{type : "tween", duration: 0.2, delay : 0.1}}
+    className="flex items-center gap-2 mb-8 text-xs font-outfit"
       style={{ color: "rgba(255,255,255,0.35)" }}>
       <Link href="/" className="hover:text-white/65 transition-colors">Home</Link>
       <span>/</span>
       <Link href="/services" className="hover:text-white/65 transition-colors">Services</Link>
       <span>/</span>
       <span style={{ color: "rgba(255,255,255,0.6)" }}>{service.name}</span>
-    </div>
+    </motion.div>
 
     {/* Tag pill */}
-    <div
+    <motion.div
+                initial={{y: -20, opacity : 0}}
+animate={{ y: 0, opacity: 1 }} 
+            transition={{type : "tween", duration: 0.3, delay : 0.2}}
       className="inline-flex items-center gap-2 mb-5 px-4 py-1.5 rounded-full border font-outfit text-[0.65rem] font-semibold tracking-[0.15em] uppercase text-indigo-400"
       style={{
         background: "rgba(20,81,110,0.25)",
@@ -55,27 +66,37 @@ const SingleServiceHero = ({service}) => {
     >
       <span className="w-1.5 h-1.5 animate-ping rounded-full bg-indigo-400" />
       Aviation Service
-    </div>
+    </motion.div>
 
     {/* Title */}
-    <h1 className="font-ovo text-4xl md:text-5xl lg:text-6xl text-white leading-tight tracking-tight mb-5 max-w-2xl">
+    <motion.h1 
+                initial={{y: 30, opacity : 0}}
+animate={{ y: 0, opacity: 1 }} 
+            transition={{type : "tween", duration: 0.4, delay : 0.2}}
+    className="font-ovo text-4xl md:text-5xl lg:text-6xl text-white leading-tight tracking-tight mb-5 max-w-2xl">
       {service.name}
-    </h1>
+    </motion.h1>
 
     {/* Short description */}
-    <p
+    <motion.p
+                initial={{y: 30, opacity : 0}}
+animate={{ y: 0, opacity: 1 }} 
+            transition={{type : "tween", duration: 0.5, delay : 0.5}}
       className="font-outfit text-base leading-relaxed max-w-xl mb-10"
       style={{ color: "rgba(255,255,255,0.5)" }}
     >
       {service.shortDescription}
-    </p>
+    </motion.p>
 
     {/* Tags + scroll hint */}
     <div className="flex items-center justify-between flex-wrap gap-4">
 
       <div className="flex flex-wrap gap-2">
         {service.tags.map((tag, i) => (
-          <span
+          <motion.span
+            initial={{y: 30, opacity : 0}}
+animate={{ y: 0, opacity: 1 }} 
+            transition={{type : "tween", duration: 0.6, delay : 0.6}}
             key={i}
             className="font-outfit text-[0.65rem] font-semibold tracking-widest uppercase px-3 py-1 rounded-full"
             style={{
@@ -84,24 +105,27 @@ const SingleServiceHero = ({service}) => {
             }}
           >
             {tag}
-          </span>
+          </motion.span>
         ))}
       </div>
 
-      <a
+      <motion.a
+                  initial={{y: -30, opacity : 0}}
+animate={{ y: 0, opacity: 1 }} 
+            transition={{type : "tween", duration: 0.5, delay : 0.5}}
         href="#details"
         className="hidden md:flex items-center gap-3 font-outfit text-[0.68rem] font-semibold tracking-[0.12em] uppercase transition-colors hover:text-white/50"
         style={{ color: "rgba(255,255,255,0.3)" }}>
         <div className="w-8 h-px" style={{ background: "rgba(255,255,255,0.2)" }} />
         Scroll to learn more
-      </a>
+      </motion.a>
 
     </div>
   </div>
 </section>
 
 
-  ) : <><div>loading</div></>
+  ) 
 }
 
 export default SingleServiceHero

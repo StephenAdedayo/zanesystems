@@ -1,5 +1,8 @@
+
+import { motion } from 'motion/react'
 import Image from 'next/image'
 import React from 'react'
+
 
 const ServiceOverview = ({service}) => {
   return  (
@@ -7,25 +10,45 @@ const ServiceOverview = ({service}) => {
 
   {/* Left — details text */}
   <div>
-    <div className="flex items-center gap-3 mb-5">
+    <motion.div
+                initial={{y:-20, opacity : 0}}
+        whileInView={{y: 0, opacity : 1}}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{type : "tween", duration: 0.2, delay : 0.1}}
+    className="flex items-center gap-3 mb-5">
       <div className="h-[1.5px] w-6 bg-brand-navy rounded-full" />
       <p className="font-outfit text-[0.65rem] font-semibold tracking-[0.2em] uppercase text-brand-navy">
         Service Overview
       </p>
-    </div>
+    </motion.div>
 
-    <h2 className="font-ovo text-3xl text-brand-navy-deep leading-tight mb-6">
+    <motion.h2 
+        initial={{y:30, opacity : 0}}
+        whileInView={{y: 0, opacity : 1}}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{type : "tween", duration: 0.4, delay : 0.2}}
+    className="font-ovo text-3xl text-brand-navy-deep leading-tight mb-6">
       Built for Precision.{" "}
       <span className="text-brand-navy italic">Delivered with Expertise.</span>
-    </h2>
+    </motion.h2>
 
-    <p className="font-outfit text-sm text-gray leading-[1.95] opacity-85">
+    <motion.p 
+                initial={{y:30, opacity : 0}}
+        whileInView={{y: 0, opacity : 1}}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{type : "tween", duration: 0.6, delay : 0.3}}
+    className="font-outfit text-sm text-gray leading-[1.95] opacity-85">
       {service.details}
-    </p>
+    </motion.p>
   </div>
 
   {/* Right — image[1] */}
-  <div className="relative">
+  <motion.div 
+              initial={{ opacity : 0}}
+        whileInView={{opacity : 1}}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{type : "tween", duration: 0.6, delay : 0.3}}
+  className="relative">
 
     {/* Image frame */}
     <div
@@ -67,7 +90,7 @@ const ServiceOverview = ({service}) => {
       </p>
     </div>
 
-  </div>
+  </motion.div>
 </div>
   )
 }

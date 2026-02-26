@@ -1,6 +1,7 @@
 "use client";
 
 import { checklist, reasons } from "@/assets/assets";
+import { motion } from "motion/react";
 
 
 
@@ -11,22 +12,36 @@ export default function WhyChooseService() {
 
         {/* Header */}
         <div className="mb-12">
-          <div className="flex items-center gap-3 mb-4">
+          <motion.div
+          initial={{y: 30, opacity : 0}}
+        whileInView={{y : 0, opacity : 1}}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{type : "tween", duration: 0.2, delay : 0.1}}
+           className="flex items-center gap-3 mb-4">
             <div className="h-[1.5px] w-7 bg-brand-navy" />
             <p className="font-outfit text-[0.68rem] font-semibold tracking-[0.2em] uppercase text-brand-navy">
               Why Choose Us
             </p>
-          </div>
-          <h2 className="font-ovo text-4xl text-brand-navy-deep leading-tight">
+          </motion.div>
+          <motion.h2 
+           initial={{ opacity : 0}}
+        whileInView={{opacity : 1}}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{type : "tween", duration: 0.4, delay : 0.2}}
+          className="font-ovo text-4xl text-brand-navy-deep leading-tight">
             The <span className="text-brand-navy italic">Zane Advantage</span>
-          </h2>
+          </motion.h2>
         </div>
 
         {/* Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
 
           {/* Featured dark panel */}
-          <div
+          <motion.div
+           initial={{y:30, opacity : 0}}
+        whileInView={{y:0, opacity : 1}}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{type : "tween", duration: 0.6, delay : 0.3}}
             className="rounded-2xl p-12 relative overflow-hidden row-span-2"
             style={{ background: "#0d151c" }}
           >
@@ -88,11 +103,15 @@ export default function WhyChooseService() {
                 ))}
               </ul>
             </div>
-          </div>
+          </motion.div>
 
           {/* Right cards */}
           {reasons.map((reason, i) => (
-            <div
+            <motion.div
+             initial={{y:-20, opacity : 0}}
+        whileInView={{y:0, opacity : 1}}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{type : "tween", duration: 0.8, delay : 0.4}}
               key={i}
               className="rounded-2xl p-8 border transition-all duration-300 hover:-translate-y-1"
               style={{
@@ -125,7 +144,7 @@ export default function WhyChooseService() {
               <p className="font-outfit text-sm text-gray leading-relaxed opacity-75">
                 {reason.description}
               </p>
-            </div>
+            </motion.div>
           ))}
 
         </div>

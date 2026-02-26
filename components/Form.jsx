@@ -1,6 +1,10 @@
+"use client"
+
 import React, { useState } from 'react'
 import toast from "react-hot-toast";
 import { sendEmail } from "@/app/actions/sendEmail";
+import { motion } from 'motion/react';
+
 
 const Form = ({className}) => {
 
@@ -38,9 +42,14 @@ const onSubmitHandler = async (e) => {
 }
 
   return (
-    <div>
+    <motion.div 
+            initial={{y: 30, opacity : 0}}
+        whileInView={{y : 0, opacity : 1}}
+        transition={{type : "tween", duration: 0.8, delay : 0.4}}
+        viewport={{ once: true, amount: 0.2 }}
+    >
+
       <form
-          id="form"
           onSubmit={onSubmitHandler}
           className={className}
           style={{ background: "#0d151c" }}
@@ -140,7 +149,7 @@ const onSubmitHandler = async (e) => {
           </a>
         </form>
 
-    </div>
+    </motion.div>
   )
 }
 

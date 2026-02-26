@@ -13,6 +13,8 @@ import { FaXTwitter } from "react-icons/fa6";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { VscMail } from "react-icons/vsc";
 import Form from "./Form";
+import { motion } from "motion/react";
+
 
 
 const socials = [
@@ -37,20 +39,36 @@ const ContactForm = () => {
         <Link href="/contact" className="text-brand-navy font-semibold">Contact Us</Link>
       </div>
 
-      <div className="flex flex-col lg:flex-row gap-12 xl:gap-20 mb-20">
+      <div id="form"
+ className="flex flex-col lg:flex-row gap-12 xl:gap-20 scroll-mt-40 mb-20">
 
         {/* ── LEFT SIDE ── */}
         <div className="lg:flex-[45%]">
-          <h1 className="font-ovo text-3xl md:text-4xl text-brand-navy-deep mb-3 leading-tight">
+          <motion.h1
+            initial={{y:30, opacity : 0}}
+        whileInView={{y: 0, opacity : 1}}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{type : "tween", duration: 0.6, delay : 0.3}}
+           className="font-ovo text-3xl md:text-4xl text-brand-navy-deep mb-3 leading-tight">
             Connect with{" "}
             <span className="text-brand-navy italic">Zane Systems</span>
-          </h1>
-          <p className="font-outfit text-sm text-gray opacity-70 mb-10 leading-relaxed">
+          </motion.h1>
+          <motion.p 
+           initial={{y: 30, opacity : 0}}
+        whileInView={{y: 0, opacity : 1}}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{type:"tween", duration: 0.4, delay : 0.2}}
+          className="font-outfit text-sm text-gray opacity-70 mb-10 leading-relaxed">
             Reach out and our team will get back to you within 24 hours.
-          </p>
+          </motion.p>
 
           {/* Contact details */}
-          <div className="flex flex-col gap-5 mb-12 border-l-2 border-brand-navy pl-6">
+          <motion.div
+           initial={{y:30, opacity : 0}}
+        whileInView={{y: 0, opacity : 1}}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{type : "tween", duration: 0.6, delay : 0.3}} 
+          className="flex flex-col gap-5 mb-12 border-l-2 border-brand-navy pl-6">
             <a
               href="tel:+2348132421458"
               className="flex items-center gap-4 text-gray hover:text-brand-navy transition-colors duration-200" >
@@ -95,10 +113,16 @@ const ContactForm = () => {
                 <p className="font-outfit text-sm font-medium">a.akinyemi@zanesystemsgs.com</p>
               </div>
             </a>
-          </div>
+          </motion.div>
 
           {/* Socials */}
-          <div>
+          <motion.div
+           initial={{y:30, opacity : 0}}
+        whileInView={{y: 0, opacity : 1}}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{type : "tween", duration: 0.6, delay : 0.4}}
+          >
+
             <p className="text-[0.65rem] font-semibold tracking-widest uppercase text-gray opacity-50 mb-4">
               Follow Us
             </p>
@@ -125,11 +149,11 @@ const ContactForm = () => {
                 </a>
               ))}
             </div>
-          </div>
+          </motion.div>
         </div>
 
         {/* ── RIGHT — FORM ── */}
-        <Form className={"lg:flex-[55%] w-full rounded-2xl md:py-10 py-8 md:px-12 px-6"}/>
+        <Form className={"lg:flex-[55%]  w-full rounded-2xl md:py-10 py-8 md:px-12 px-6"}/>
         
       </div>
     </div>

@@ -1,7 +1,9 @@
 "use client"
 
 import { services } from "@/assets/assets";
+import { motion } from "motion/react";
 import Link from "next/link";
+
 
 export default function OurServices() {
   return (
@@ -11,20 +13,35 @@ export default function OurServices() {
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16">
           <div>
-            <div className="flex items-center gap-3 mb-4">
+            <motion.div 
+            initial={{y: 30, opacity : 0}}
+        whileInView={{y : 0, opacity : 1}}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{type : "tween", duration: 0.2, delay : 0.1}}
+            className="flex items-center gap-3 mb-4">
               <div className="h-[1.5px] w-7 bg-brand-navy" />
               <p className="font-outfit text-[0.68rem] font-semibold tracking-[0.2em] uppercase text-brand-navy">
                 What We Offer
               </p>
-            </div>
-            <h2 className="font-ovo text-4xl text-brand-navy-deep leading-tight">
+            </motion.div>
+            <motion.h2 
+               initial={{y:-20, opacity : 0}}
+        whileInView={{y : 0, opacity : 1}}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{type : "tween", duration: 0.4, delay : 0.2}} 
+            className="font-ovo text-4xl text-brand-navy-deep leading-tight">
               Everything Your{" "}
               <span className="text-brand-navy italic">Fleet Needs</span>
-            </h2>
+            </motion.h2>
           </div>
-          <p className="font-outfit text-sm text-gray leading-relaxed max-w-xs opacity-70 lg:text-right">
+          <motion.p 
+   initial={{y:-20, opacity : 0}}
+        whileInView={{y : 0, opacity : 1}}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{type : "tween", duration: 0.4, delay : 0.2}} 
+          className="font-outfit text-sm text-gray leading-relaxed max-w-xs opacity-70 lg:text-right">
             Click any service to explore the full scope — from sourcing to final delivery.
-          </p>
+          </motion.p>
         </div>
 
         {/* Service Cards */}
@@ -57,7 +74,12 @@ export default function OurServices() {
               {/* Left accent bar */}
               <div className="absolute left-0 top-3 bottom-3 w-0.75 rounded-r-full bg-brand-navy scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-center" />
 
-              <div className="items-center gap-6 p-7">
+              <motion.div 
+              initial={{y: 30, opacity : 0}}
+        whileInView={{y : 0, opacity : 1}}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{type : "tween", duration: 0.6, delay : 0.3}}
+              className="items-center gap-6 p-7">
 
                 {/* Index */}
                 <div
@@ -114,7 +136,7 @@ export default function OurServices() {
                   </span>
                 </div>
 
-              </div>
+              </motion.div>
             </Link>
           ))}
         </div>

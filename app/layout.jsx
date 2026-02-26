@@ -25,6 +25,11 @@ export const metadata = {
   },
   description: "Zane Systems Limited is a strategic aviation procurement partner specializing in aircraft sales, certified parts sourcing, and global supply chain logistics.",
   keywords: ["Aviation", "Aircraft Procurement", "Parts Sourcing", "Zane Systems", "Aircraft Sales"],
+
+  alternates: {
+    canonical: "https://zanesystemsgs.com",
+  },
+
   openGraph: {
     title: "Zane Systems | Global Aviation Solutions",
     description: "Strategic aircraft procurement and meticulous supply chain coordination.",
@@ -36,6 +41,10 @@ export const metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    }
   },
 };
 
@@ -54,16 +63,35 @@ export default function RootLayout({ children }) {
         <Footer />
 
         <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "WebSite",
-              "name": "Zane Systems",
-              "url": "https://zanesystemsgs.com/"
-            }),
-          }}
-        />
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: "Zane Systems Limited",
+      url: "https://zanesystemsgs.com",
+      "logo": "https://zanesystemsgs.com/favicon.ico",
+      address: {
+        "@type": "PostalAddress",
+        addressCountry: "NG",
+      },
+      contactPoint: [{
+        "@type": "ContactPoint",
+        telephone: "+234 8132421458",
+        contactType: "customer service",
+        email: "info@zanesystemsgs.com",
+      },
+
+      {
+    "@type": "ContactPoint",
+    telephone: "+234-814-318-4639",
+    contactType: "sales",
+    email: "info@zanesystemsgs.com",
+  }
+    ]
+    }),
+  }}
+/>
       </body>
     </html>
   );

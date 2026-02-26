@@ -1,14 +1,22 @@
 "use client"
 
+
 import { services } from "@/assets/assets";
 import Link from "next/link";
 import React from "react";
 import Button from "./Button";
+import { motion } from "motion/react";
+
 
 const HomeServices = () => {
   return (
     <div className="px-5 md:px-16 lg:px-20 my-20 flex items-start flex-col justify-center">
-      <div className="flex items-center justify-between gap-2 text-indigo-600 bg-indigo-50 rounded-full px-3 py-1 text-center  w-fit">
+      <motion.div 
+     initial={{y: -30, opacity : 0}}
+        whileInView={{y : 0, opacity : 1}}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{type : "tween", duration: 0.5, delay : 0.2}} 
+      className="flex items-center justify-between gap-2 text-indigo-600 bg-indigo-50 rounded-full px-3 py-1 text-center  w-fit">
         <svg
           width="13"
           height="14"
@@ -24,11 +32,16 @@ const HomeServices = () => {
           />
         </svg>
         <h1 className="text-[15px] font-semibold">Our Aviation Services</h1>
-      </div>
-      <p className="text-sm text-gray-700/90 mt-5 ">
+      </motion.div>
+      <motion.p 
+      initial={{y: 30, opacity : 0}}
+        whileInView={{y : 0, opacity : 1}}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{type : "tween", duration: 0.6, delay : 0.3}}
+      className="text-sm text-gray-700/90 mt-5 ">
         Comprehensive procurement and supply chain solutions designed to support
         safe, efficient, and compliant aviation operations worldwide.
-      </p>
+      </motion.p>
 
      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 items-center justify-center w-full gap-10 my-10 ">
               {services.slice(0,3).map((service, index) => (
@@ -59,7 +72,12 @@ const HomeServices = () => {
                   {/* Left accent bar */}
                   <div className="absolute left-0 top-3 bottom-3 w-0.75 rounded-r-full bg-brand-navy scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-center" />
     
-                  <div className="items-center gap-6 p-7">
+                  <motion.div 
+                  initial={{y: 30, opacity : 0}}
+        whileInView={{y : 0, opacity : 1}}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{type : "tween", duration: 0.6, delay : 0.3}}
+                  className="items-center gap-6 p-7">
     
                     {/* Index */}
                     <div
@@ -116,7 +134,7 @@ const HomeServices = () => {
                       </span>
                     </div>
     
-                  </div>
+                  </motion.div>
                 </Link>
               ))}
             </div>

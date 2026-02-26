@@ -41,13 +41,14 @@ const Navbar = () => {
 
   return (
     <section
-      className={`px-5 md:px-16 lg:px-20 fixed py-5 ${isScrolled ? "text-black bg-white backdrop-blur-3xl shadow" : "text-white"} flex items-center justify-between w-full z-40 transition-all duration-300`}
+      className={`px-5 md:px-16 lg:px-20 fixed text-black py-5 ${isScrolled ? "text-black bg-white backdrop-blur-3xl shadow" : "text-white"} flex items-center justify-between w-full z-40 transition-all duration-300`}
     >
       {/* logo */}
       <Link href={"/"}>
-        <p className="font-semibold font-ovo sm:text-3xl text-lg bg-transparent cursor-pointer">
-          ZANE SYSTEMS
+        <p className="font-semibold font-ovo sm:text-2xl text-lg bg-transparent cursor-pointer italic">
+          ZANE {" "} <span className="text-brand-navy font-bold italic">SYSTEMS</span> 
         </p>
+        
       </Link>
 
       {/* Navlinks desktop*/}
@@ -61,7 +62,7 @@ const Navbar = () => {
           >
             {link.name}
             <div
-              className={`${isScrolled ? "bg-gray-700" : "bg-brand-blue"} h-0.5 w-0 group-hover:w-full transition-all duration-200`}
+              className={`${isScrolled ? "bg-gray-700" : "bg-brand-navy"} h-0.5 w-0 group-hover:w-full transition-all duration-200`}
             />
           </Link>
         ))}
@@ -115,11 +116,15 @@ const Navbar = () => {
       <div
         className={`fixed top-0 h-screen right-0  ${menuOpen ? "w-full px-10 " : "w-0 overflow-hidden"} transition-all duration-300 bg-nav z-50 block lg:hidden`}
       >
-        <h2 className="text-3xl text-white font-semibold uppercase text-center mt-20 mb-10">
+        {/* <h2 className="text-3xl text-white font-semibold uppercase text-center mt-20 mb-10">
           Zane Systems
-        </h2>
+        </h2> */}
 
-        <div className="flex flex-col  gap-5  ">
+        <p className="font-semibold text-white text-center font-ovo  mt-20 mb-10 text-3xl bg-transparent cursor-pointer italic">
+          ZANE {" "} <span className="text-brand-navy font-bold italic">SYSTEMS</span> 
+        </p>
+
+        <div onClick={() => setIsMenuOpen(false)} className="flex flex-col gap-5  ">
           {links.map((link, index) => (
             <Link
               key={index}

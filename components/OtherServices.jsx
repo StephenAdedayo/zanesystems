@@ -1,30 +1,48 @@
 "use client"
 
 import { services } from '@/assets/assets'
+import { motion } from 'motion/react'
 import Link from 'next/link'
 import React from 'react'
+
 
 const OtherServices = ({service}) => {
   return  (
 <div className="pt-14 border-t border-slate-200 px-5 md:px-16 lg:px-20 pb-20">
 
   {/* Header */}
-  <div className="flex items-center gap-3 mb-3">
+  <motion.div 
+                   initial={{y:-20, opacity : 0}}
+        whileInView={{y: 0, opacity : 1}}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{type : "tween", duration: 0.2, delay : 0.1}}
+  className="flex items-center gap-3 mb-3">
     <div className="h-[1.5px] w-6 bg-brand-navy rounded-full" />
     <p className="font-outfit text-[0.65rem] font-semibold tracking-[0.2em] uppercase text-brand-navy">
       Explore More
     </p>
-  </div>
+  </motion.div>
 
-  <h2 className="font-ovo text-2xl text-brand-navy-deep mb-8">
+  <motion.h2 
+                  initial={{y:30, opacity : 0}}
+        whileInView={{y: 0, opacity : 1}}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{type : "tween", duration: 0.4, delay : 0.2}}
+  className="font-ovo text-2xl text-brand-navy-deep mb-8">
     Other <span className="text-brand-navy italic">Services</span>
-  </h2>
+  </motion.h2>
 
   {/* Grid */}
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
     {services.filter((si) => si.slug !== service.slug).map((s, i) => (
-      <Link
+      <motion.div
         key={i}
+         initial={{y:30, opacity : 0}}
+        whileInView={{y: 0, opacity : 1}}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{type : "tween", duration: 0.6, delay : 0.3}}
+      >
+      <Link
         href={`/services/${s.slug}`}
         className="group relative block p-6 rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1"
         style={{
@@ -75,6 +93,7 @@ const OtherServices = ({service}) => {
         </div>
 
       </Link>
+      </motion.div>
     ))}
   </div>
 
