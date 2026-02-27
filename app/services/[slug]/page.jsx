@@ -1,47 +1,30 @@
-"use client"
-
-import { services } from '@/assets/assets'
-import OtherServices from '@/components/OtherServices'
-import ServiceOverview from '@/components/ServiceOverview'
-import SingleServiceHero from '@/components/SingleServiceHero'
-import WhatsIncluded from '@/components/WhatsIncluded'
-import { useParams } from 'next/navigation'
-import React, { useEffect, useState } from 'react'
+import ServiceContent from '@/components/ServiceContent';
+import React from 'react'
 
 
+export const generateMetadata =  async ({ params }) => {
+  const { slug } = await params;
+  // Capitalize the slug for the title (e.g., "aircraft-procurement" -> "Aircraft Procurement")
+  const formattedTitle = slug.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
 
-const SingleService = () => {
-
-    const {slug} = useParams()
-const [service, setService] = useState(null)
-
-const getSingleService = () => {
-
-    services.map((service) => {
-         if(service.slug === slug){
-            setService(service)
-         }
-    })
-
+  return {
+    title: `${formattedTitle} | Zane Systems`,
+    description: "Zane Systems provides elite aviation procurement and strategic supply chain solutions. From aircraft acquisition to global parts sourcing, we deliver certified excellence and seamless logistics for the aviation industry.",
+    alternates: {
+      canonical: `https://zanesystemsgs.com/services/${slug}`,
+    }
+  }
 }
 
+const SingleService = async ({params}) => {
 
-useEffect(() => {
-   getSingleService()
-}, [])
+  const {slug} = await params
 
-  return service ? (
-    <div className='bg-slate-100'>
-      <SingleServiceHero service={service}/>
-      <ServiceOverview service={service}/>
-      <WhatsIncluded service={service}/>
-      <OtherServices service={service}/>
+  return (
+    <div>
+      <ServiceContent slug={slug}/>
     </div>
-
-  ) : <div className='flex justify-center items-center h-screen w-full'>
-         <div className='loader'></div>
-  </div> 
+  )
 }
-
 
 export default SingleService

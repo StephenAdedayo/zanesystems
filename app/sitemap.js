@@ -1,18 +1,31 @@
+import { services } from "@/assets/assets";
+
+
+
 export default function sitemap() {
   const baseUrl = "https://zanesystemsgs.com";
 
-  // The main pages of your site
-  const routes = [
+// 1. Define your static routes
+  const staticRoutes = [
     "",
     "/about",
     "/services",
     "/contact",
   ].map((route) => ({
     url: `${baseUrl}${route}`,
-    lastModified: new Date().toISOString().split('T')[0], // YYYY-MM-DD format
+    lastModified: new Date().toISOString(),
     changeFrequency: 'monthly',
     priority: route === "" ? 1 : 0.8,
   }));
 
-  return routes;
+  // 2. Generate dynamic routes from your services assets
+  const serviceRoutes = services.map((service) => ({
+    url: `${baseUrl}/services/${service.slug}`,
+    lastModified: new Date().toISOString(),
+    changeFrequency: 'weekly',
+    priority: 0.7,
+  }));
+
+  // 3. Combine them all
+  return [...staticRoutes, ...serviceRoutes];
 }
