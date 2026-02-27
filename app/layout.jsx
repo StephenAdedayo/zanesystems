@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Toaster } from "react-hot-toast";
+import Script from "next/script";
 
 const nunito = Outfit({
   subsets: ["latin"], weight : ["400", "500", "600", "700"]
@@ -62,36 +63,42 @@ export default function RootLayout({ children }) {
          </main>
         <Footer />
 
-        <script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      name: "Zane Systems Limited",
-      url: "https://zanesystemsgs.com",
-      logo: "https://zanesystemsgs.com/favicon.ico",
-      address: {
-        "@type": "PostalAddress",
-        addressCountry: "NG",
-      },
-      contactPoint: [{
-        "@type": "ContactPoint",
-        telephone: "+234 8132421458",
-        contactType: "customer service",
-        email: "info@zanesystemsgs.com",
-      },
-
-      {
-    "@type": "ContactPoint",
-    telephone: "+234 8132421458",
-    contactType: "sales",
-    email: "info@zanesystemsgs.com",
-  }
-    ]
-    }),
-  }}
-/>
+        {/* 🚀 Optimized Structured Data */}
+    <Script
+      id="structured-data"
+      type="application/ld+json"
+      strategy="beforeInteractive"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Zane Systems Limited",
+          "alternateName": "Zane Systems",
+          "url": "https://zanesystemsgs.com",
+          "logo": "https://zanesystemsgs.com/favicon.ico",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "NG"
+          },
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "telephone": "+234 8132421458",
+              "contactType": "customer service",
+              "email": "info@zanesystemsgs.com",
+              "availableLanguage": "en"
+            },
+            {
+              "@type": "ContactPoint",
+              "telephone": "+234 8132421458",
+              "contactType": "sales",
+              "email": "info@zanesystemsgs.com",
+              "availableLanguage": "en"
+            }
+          ]
+        }),
+      }}
+    />
       </body>
     </html>
   );
