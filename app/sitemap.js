@@ -22,7 +22,7 @@ export default function sitemap() {
   const serviceRoutes = services.map((service) => ({
     url: `${baseUrl}/services/${service.slug}`,
     lastModified: new Date().toISOString(),
-    changeFrequency: 'weekly',
+    changeFrequency: 'monthly',
     priority: 0.7,
   }));
 
