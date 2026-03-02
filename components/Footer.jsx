@@ -22,7 +22,7 @@ const Footer = () => {
           </div>
 
           <div className="w-full md:w-[45%] lg:w-[15%] flex flex-col items-center md:items-start text-center md:text-left">
-            <h3 className="text-sm text-white font-medium">Important Links</h3>
+            <h3 className="text-sm font-ovo text-white font-semibold">Important Links</h3>
             <div className="flex flex-col gap-2 mt-6">
               <Link
                 href="/"
@@ -53,7 +53,7 @@ const Footer = () => {
           </div>
 
           <div className="w-full md:w-[45%] lg:w-[15%] flex flex-col items-center md:items-start text-center md:text-left">
-            <h3 className="text-sm text-white font-medium">Social Links</h3>
+            <h3 className="text-sm text-white font-ovo font-semibold">Social Links</h3>
             <div className="flex flex-col gap-2 mt-6">
               <a
                 href="#"
@@ -84,7 +84,7 @@ const Footer = () => {
 
           <div className="w-full md:w-[45%] lg:w-[25%] flex flex-col items-center md:items-start text-center md:text-left">
             <div className="text-white">
-              <h2 className="font-semibold  text-sm mb-5 ">Get in touch</h2>
+              <h2 className="font-semibold  text-sm mb-5 font-ovo">Get in touch</h2>
               <div className="text-sm  space-y-2">
                 <p className="text-sm text-white/60 hover:text-white transition-colors">
                   +234 8132421458

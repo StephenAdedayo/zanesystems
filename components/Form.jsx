@@ -47,7 +47,7 @@ const onSubmitHandler = async (e) => {
         whileInView={{y : 0, opacity : 1}}
         transition={{type : "tween", duration: 0.8, delay : 0.4}}
         viewport={{ once: true, amount: 0.2 }}
-    >
+    className='w-full'>
 
       <form
           onSubmit={onSubmitHandler}

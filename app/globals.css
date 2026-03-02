@@ -1,8 +1,6 @@
 @import "tailwindcss";
 
-* {
-  font-family: Outfit;
-}
+
 
 @keyframes glowBorder {
   0%,
@@ -77,6 +75,13 @@
   --shadow-nav: 0 2px 20px rgba(11, 15, 26, 0.14);
 }
 
+* {
+  font-family: var(--font-outfit);
+}
+
+.font-ovo {
+  font-family: var(--font-ovo);
+}
 
 /* HTML: <div class="loader"></div> */
 .loader {

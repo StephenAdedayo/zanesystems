@@ -16,7 +16,7 @@ const HomeServices = () => {
         whileInView={{y : 0, opacity : 1}}
         viewport={{ once: true, amount: 0.2 }}
         transition={{type : "tween", duration: 0.5, delay : 0.2}} 
-      className="flex items-center justify-between gap-2 text-indigo-600 bg-indigo-50 rounded-full px-3 py-1 text-center  w-fit">
+      className="flex items-center justify-between gap-2 text-indigo-600 bg-indigo-50 rounded-full xl:px-6 xl:py-3 px-3 py-1 text-center  w-fit">
         <svg
           width="13"
           height="14"
@@ -31,7 +31,7 @@ const HomeServices = () => {
             strokeLinecap="round"
           />
         </svg>
-        <h1 className="text-[15px] font-semibold">Our Aviation Services</h1>
+        <h1 className="xl:text-[26px] font-ovo text-[15px] font-semibold">Our Aviation Services</h1>
       </motion.div>
       <motion.p 
       initial={{y: 30, opacity : 0}}

@@ -61,7 +61,7 @@ const NextHero = () => {
           <Image
             src={assets.nexthero_image}
             alt="next_hero"
-            className="rounded-2xl hover:scale-105 transition-all ease-in duration-300"
+            className="rounded-3xl hover:scale-105 transition-all ease-in duration-300"
           />
         </motion.div>
 
@@ -71,7 +71,7 @@ const NextHero = () => {
         viewport={{ once: true, amount: 0.2 }}
         transition={{type : "tween", duration: 0.6, delay : 0.3}}
         className="flex flex-col md:gap-8 gap-6 flex-[50%]">
-          <div className="flex items-center justify-between gap-2 text-indigo-600 bg-indigo-50 rounded-full px-3 py-1 text-center w-fit">
+          <div className="flex items-center justify-between gap-2 text-indigo-600 bg-indigo-50 rounded-full xl:px-6 xl:py-3 px-3 py-1 text-center w-fit">
             <svg
               width="13"
               height="14"
@@ -86,7 +86,7 @@ const NextHero = () => {
                 strokeLinecap="round"
               />
             </svg>
-            <p className=" text-[15px] font-semibold">
+            <p className="xl:text-[26px] text-[15px] font-ovo font-semibold">
               Leaders in Aviation Procurement
             </p>
           </div>
@@ -108,7 +108,7 @@ const NextHero = () => {
         viewport={{ once: true, amount: 0.2 }}
         transition={{type : "tween", duration: 0.8, delay : 0.3}}
         className="flex flex-col md:gap-8 gap-6 flex-[50%]">
-          <div className="flex items-center justify-between gap-2 text-indigo-600 bg-indigo-50 rounded-full px-3 py-1 text-center w-fit">
+          <div className="flex items-center justify-between gap-2 text-indigo-600 bg-indigo-50 rounded-full xl:px-6 xl:py-3 px-3 py-1 text-center w-fit">
             <svg
               width="13"
               height="14"
@@ -123,7 +123,7 @@ const NextHero = () => {
                 strokeLinecap="round"
               />
             </svg>
-            <p className="text-[15px] font-semibold">
+            <p className="xl:text-[26px] text-[15px] font-ovo font-semibold">
               Certified Aircraft Parts at Competitive Value
             </p>
           </div>
@@ -145,7 +145,7 @@ const NextHero = () => {
           <Image
             src={assets.pricing}
             alt="next_hero"
-            className="rounded-2xl hover:scale-105 transition-all ease-in duration-300 h-[70%]"
+            className="rounded-3xl hover:scale-105 transition-all ease-in duration-300 h-[70%]"
           />
           
         </motion.div>
@@ -162,12 +162,12 @@ const NextHero = () => {
           <Image
             src={assets.trust}
             alt="next_hero"
-            className="rounded-2xl hover:scale-105 transition-all ease-in duration-300"
+            className="rounded-3xl hover:scale-105 transition-all ease-in duration-300"
           />
         </motion.div>
 
         <motion.div className="flex flex-col md:gap-8 gap-6 flex-[50%]">
-          <div className="flex items-center justify-between gap-2 text-indigo-600 bg-indigo-50 rounded-full px-3 py-1 text-center w-fit">
+          <div className="flex items-center justify-between gap-2 text-indigo-600 bg-indigo-50 rounded-full xl:px-6 xl:py-3 px-3 py-1 text-center w-fit">
             <svg
               width="13"
               height="14"
@@ -182,7 +182,7 @@ const NextHero = () => {
                 strokeLinecap="round"
               />
             </svg>
-            <p className="text-[15px] font-semibold">
+            <p className="xl:text-[26px] text-[15px] font-ovo font-semibold">
               Your Trust Powers Our Reputation
             </p>
           </div>

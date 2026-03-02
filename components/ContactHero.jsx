@@ -29,7 +29,7 @@ const ContactHero = () => {
         initial={{y: 30, opacity : 0}}
         animate={{y : 0, opacity : 1}}
         transition={{type : "tween", duration: 0.3, delay : 0.2}}
-        className="text-white text-center text-2xl sm:text-3xl md:text-4xl mb-5">
+        className="text-white font-ovo text-center text-2xl sm:text-3xl md:text-5xl mb-5">
           Let’s Strengthen Your Aviation Operations
         </motion.h1>
         <motion.p

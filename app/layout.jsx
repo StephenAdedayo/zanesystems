@@ -6,11 +6,13 @@ import { Toaster } from "react-hot-toast";
 import Script from "next/script";
 
 const nunito = Outfit({
-  subsets: ["latin"], weight : ["400", "500", "600", "700"]
+  subsets: ["latin"], weight : ["400", "500", "600", "700"],
+  variable : "--font-outfit"
 });
 
 const ovo = Ovo({
-  subsets: ["latin"], weight : ["400"]
+  subsets: ["latin"], weight : ["400"],
+  variable : "--font-ovo"
 });
 
 // export const metadata = {
@@ -54,7 +56,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${nunito.className} ${ovo.className} antialiased leading-8`}>
+        className={`${nunito.variable} ${ovo.variable} antialiased leading-8`}>
           <Toaster />
                 <Navbar />
          <main className="min-h-screen">
