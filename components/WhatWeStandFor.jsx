@@ -47,9 +47,9 @@ const WhatWeStandFor = () => {
         viewport={{ once: true, amount: 0.2 }}
         transition={{type : "tween", duration: 0.6, delay : 0.3}}
             key={index}
-            className="relative rounded-xl backdrop-blur-2xl p-6 transition-transform duration-300 hover:-translate-y-2"
+            className="relative rounded-xl bg-white/60 backdrop-blur-2xl p-6 transition-transform duration-300 hover:-translate-y-2"
             style={{
-              background: "rgba(255, 255, 255, 0.55)",
+              // background: "rgba(255, 255, 255, 0.55)",
               border: "1px solid rgba(255, 255, 255, 0.75)",
               boxShadow: "0 4px 24px rgba(0, 0, 0, 0.06)",
               animation: "glowBorder 3s ease-in-out infinite",
@@ -57,12 +57,12 @@ const WhatWeStandFor = () => {
           >
             {/* Top row — icon + number */}
             <div className="flex justify-between items-start mb-6">
-              <div className="bg-indigo-50 border border-indigo-200 p-3 rounded-lg text-indigo-600">
+              <div className="bg-nav/10 border border-brand-navy p-3 rounded-lg text-brand-navy">
                 {value.icon}
               </div>
-              <p className="font-ovo text-5xl text-slate-300 select-none">
+              {/* <p className="font-ovo text-5xl text-slate-300 select-none">
                 {value.number}
-              </p>
+              </p> */}
             </div>
 
             {/* Title */}
@@ -74,7 +74,7 @@ const WhatWeStandFor = () => {
             <div className="h-[1.5px] w-8 bg-brand-navy rounded-full mb-4 transition-all duration-300" />
 
             {/* Description */}
-            <p className="font-outfit text-sm text-gray leading-relaxed">
+            <p className="font-outfit text-sm text-gray/70 leading-relaxed">
               {value.description}
             </p>
           </motion.div>

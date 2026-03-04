@@ -3,12 +3,20 @@
 import { services } from "@/assets/assets";
 import { motion } from "motion/react";
 import Link from "next/link";
+import { MdKeyboardArrowRight } from "react-icons/md";
 
 
 export default function OurServices() {
   return (
     <section className="py-20 md:px-16 px-5  bg-slate-100">
       <div className="w-full">
+
+        {/* Breadcrumb */}
+      <div className="flex items-center gap-1 mb-16 text-sm text-gray">
+        <Link href="/" className="hover:text-[#14516e] transition-colors">Home</Link>
+        <MdKeyboardArrowRight />
+        <Link href="/services" className="text-brand-navy font-semibold">Services</Link>
+      </div>
 
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16">
@@ -90,7 +98,7 @@ export default function OurServices() {
                   }}
                 >
                   <span className="font-ovo text-xl text-brand-navy opacity-60 group-hover:opacity-100 transition-opacity duration-300">
-                    {service.number}
+                    {service.icon}
                   </span>
                 </div>
 

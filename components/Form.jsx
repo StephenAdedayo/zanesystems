@@ -73,7 +73,7 @@ const onSubmitHandler = async (e) => {
           <div className="space-y-4 mb-6">
             <input
               type="text"
-              placeholder="Full Name"
+              placeholder="Full Name*"
               className="w-full font-outfit text-sm px-5 py-3.5 rounded-xl outline-none transition-all duration-300 focus:border-brand-navy focus:border-2"
               style={{
                 background: "rgba(255,255,255,0.05)",
@@ -84,6 +84,7 @@ const onSubmitHandler = async (e) => {
               onBlur={e => e.target.style.borderColor = "rgba(255,255,255,0.1)"}
               value={fullName}
               onChange={(e) => setFullName(e.target.value)}
+              required
             />
             <input
               type="email"

@@ -88,7 +88,7 @@ const HomeServices = () => {
                       }}
                     >
                       <span className="font-ovo text-xl text-brand-navy opacity-60 group-hover:opacity-100 transition-opacity duration-300">
-                        {service.number}
+                        {service.icon}
                       </span>
                     </div>
     

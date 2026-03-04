@@ -34,14 +34,14 @@ const Whychoose = () => {
         whileInView={{y : 0, opacity : 1}}
         viewport={{ once: true, amount: 0.2 }}
         transition={{type : "tween", duration: 0.8, delay : 0.4}}
-        className="text-white/90 text-2xl">WHY ZANE SYSTEMS LIMITED?</motion.h1>
+        className="text-white/90 text-2xl">WHY ZANE SYSTEMS?</motion.h1>
         <motion.p 
         initial={{y: 30, opacity : 0}}
         whileInView={{y : 0, opacity : 1}}
         viewport={{ once: true, amount: 0.2 }}
         transition={{type : "tween", duration: 0.8, delay : 0.6}}
         className="text-white/60 font-ovo text-sm">
-          Zane Systems Limited operates as an independent aviation procurement
+          Zane Systems operates as an independent aviation procurement
           and supply chain partner, delivering certified aircraft sourcing
           solutions through a trusted global supplier network. Our goal is to
           provide strategic, compliant, and efficient procurement services

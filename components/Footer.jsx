@@ -15,7 +15,7 @@ const Footer = () => {
         </p>            </Link>
             <div className="w-full max-w-52 h-px mt-8 bg-linear-to-r from-black via-white/25 to-black"></div>
             <p className="text-sm text-white/60 mt-6 max-w-sm leading-relaxed">
-              Zane Systems Limited is a trusted aviation procurement and supply
+              Zane Systems is a trusted aviation procurement and supply
               chain partner, delivering certified aircraft sourcing solutions
               through a reliable global supplier network.
             </p>
@@ -53,32 +53,36 @@ const Footer = () => {
           </div>
 
           <div className="w-full md:w-[45%] lg:w-[15%] flex flex-col items-center md:items-start text-center md:text-left">
-            <h3 className="text-sm text-white font-ovo font-semibold">Social Links</h3>
+            <h3 className="text-sm text-white font-ovo font-semibold">Our Services</h3>
             <div className="flex flex-col gap-2 mt-6">
-              <a
-                href="#"
+              <Link
+                href="/services/aircraft-procurement"
                 className="text-sm text-white/60 hover:text-white transition-colors"
               >
-                Twitter
-              </a>
-              <a
-                href="#"
+                Aircraft Procurement
+              </Link>
+              <Link
+                href="/services/parts-procurement"
                 className="text-sm text-white/60 hover:text-white transition-colors"
               >
-                Instagram
-              </a>
+Parts Procurement            
+  </Link>
               <a
-                href="#"
+                href="/services/vendor-management"
                 className="text-sm text-white/60 hover:text-white transition-colors"
               >
-                Youtube
-              </a>
+Vendor-management           </a>
               <a
-                href="#"
+                href="/services/logistics"
                 className="text-sm text-white/60 hover:text-white transition-colors"
               >
-                Linkedin
-              </a>
+Logistics              </a>
+
+<a
+                href="/services/consulting"
+                className="text-sm text-white/60 hover:text-white transition-colors"
+              >
+consulting          </a>
             </div>
           </div>
 
@@ -87,7 +91,8 @@ const Footer = () => {
               <h2 className="font-semibold  text-sm mb-5 font-ovo">Get in touch</h2>
               <div className="text-sm  space-y-2">
                 <p className="text-sm text-white/60 hover:text-white transition-colors">
-                  +234 8132421458
+                  <a href="tel:+234 8132421458">+234 8132421458</a>
+
                 </p>
 
                <p>
@@ -96,11 +101,11 @@ const Footer = () => {
  </a>
                 </p> 
 
-                <p>
+                {/* <p>
 <a href="mailto:a.akinyemi@zanesystemsgs.com?subject=Inquiry%20about%20Zane%20Systems%20Services&body=Hello%20Adebisi,%20I%20would%20like%20to%20discuss..." className="text-sm text-white/60 hover:text-white transition-colors">
 a.akinyemi@zanesystemsgs.com               
  </a>
-                </p>
+                </p> */}
 
  
 

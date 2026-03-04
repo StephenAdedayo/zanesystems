@@ -11,24 +11,23 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 const OurMission = () => {
   return (
     <div className="px-5 md:px-16 lg:px-20 my-20">
-      <div className="flex items-center gap-1 mb-16">
-        <Link href={"/"}>Home</Link>
+      {/* Breadcrumb */}
+      <div className="flex items-center gap-1 mb-16 text-sm text-gray">
+        <Link href="/" className="hover:text-[#14516e] transition-colors">Home</Link>
         <MdKeyboardArrowRight />
-        <Link href={"/about"} className="text-brand-navy">
-          About Us
-        </Link>
+        <Link href="/about" className="text-brand-navy font-semibold">About Us</Link>
       </div>
-
-      <motion.div
-               initial={{y: 30, opacity : 0}}
+      <motion.div 
+            initial={{y: 30, opacity : 0}}
         whileInView={{y : 0, opacity : 1}}
         viewport={{ once: true, amount: 0.2 }}
         transition={{type : "tween", duration: 0.2, delay : 0.1}}
-      className="flex items-center  gap-5 mb-8">
-        <hr className="h-[0.5] w-10 text-brand-navy-deep" />
-        <p className="text-brand-navy text-[0.65rem] font-semibold tracking-[0.2em] uppercase">Our Mission</p>
-
-      </motion.div>
+            className="flex items-center gap-3 mb-4">
+              <div className="h-[1.5px] w-7 bg-brand-navy" />
+              <p className="font-outfit text-[0.68rem] font-semibold tracking-[0.2em] uppercase text-brand-navy">
+                our mission
+              </p>
+            </motion.div>
 
       <div className="flex flex-col-reverse tablet:flex-row gap-20">
         <div className="mb-8 flex-[50%]">
@@ -48,7 +47,7 @@ const OurMission = () => {
         viewport={{ once: true, amount: 0.2 }}
         transition={{type : "tween", duration: 0.6, delay : 0.3}}
           className="mb-5 text-gray-700/90">
-            Zane Systems Limited was founded on a single conviction: the
+            Zane Systems was founded on a single conviction: the
             aviation industry deserves a procurement partner that prioritizes
             precision, transparency, and operational excellence.
           </motion.p>

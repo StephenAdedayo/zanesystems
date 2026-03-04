@@ -20,9 +20,9 @@ const AboutUsHero = () => {
         initial={{y: -20, opacity : 0}}
         animate={{y : 0, opacity : 1}}
         transition={{type : "tween", duration: 0.2, delay : 0.1}}
-         className="flex gap-3 items-center bg-glass rounded-full mb-5 px-4 py-2">
+         className="flex gap-3 items-center bg-glass rounded-full mb-5 px-6 py-2">
           <p className="size-3 bg-white rounded-full animate-ping"></p>
-          <h1 className="text-sm text-white ">About Zane Systems Limited</h1>
+          <h1 className="text-sm text-white ">About Us</h1>
         </motion.div>
 
         <motion.h1 
@@ -37,7 +37,7 @@ const AboutUsHero = () => {
         animate={{y : 0, opacity : 1}}
         transition={{type : "tween", duration: 0.6, delay : 0.3}}
         className="text-white/80 text-center text-sm mb-5 md:text-base sm:w-150 w-full">
-          Zane Systems Limited is a strategic aviation procurement and supply
+          We are a strategic aviation procurement and supply
           chain partner committed to delivering reliable, compliant, and
           globally connected solutions.
         </motion.p>

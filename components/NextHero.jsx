@@ -41,7 +41,7 @@ const NextHero = () => {
         viewport={{ once: true, amount: 0.2 }}
         transition={{type : "tween", duration: 0.5, delay : 0.3}}
                 className="md:text-center text-justify  text-sm text-gray-700/90">
-          Zane Systems Limited provides expert aircraft procurement and  {" "}
+          We provide expert aircraft procurement and  {" "}
           certified <br /> parts sourcing, ensuring efficient and reliable supply chain
           solutions worldwide.
         </motion.p>
@@ -92,7 +92,7 @@ const NextHero = () => {
           </div>
           <hr className="text-brand-navy-deep h-0.5 w-10" />
           <p className="text-sm text-gray-700/90">
-            Partner with Zane Systems Limited for aircraft acquisition,
+            Partner with us for aircraft acquisition,
             certified parts sourcing, and seamless supply chain coordination. We
             deliver trusted aviation solutions backed by a global supplier
             network.

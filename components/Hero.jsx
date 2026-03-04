@@ -26,9 +26,9 @@ const Hero = () => {
         initial={{y: -20, opacity : 0}}
 animate={{ y: 0, opacity: 1 }} 
         transition={{type : "tween", duration: 0.2, delay : 0.1}}
-        className="flex gap-3 items-center bg-glass rounded-full mb-5 px-4 py-2">
+        className="flex gap-3 items-center bg-glass rounded-full mb-5 px-6 py-2">
           <p className="size-3 bg-white rounded-full animate-ping"></p>
-          <h1 className="text-sm text-white">Zane Systems Limited</h1>
+          <h1 className="text-sm text-white">Zane Systems</h1>
         </motion.div>
 
         <motion.h1 
