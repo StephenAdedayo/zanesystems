@@ -80,7 +80,7 @@ const ServiceOverview = ({service}) => {
       }}
     >
       <p className="font-ovo text-2xl text-white leading-none mb-1">
-        15<span className="text-brand-navy">+</span>
+        1<span className="text-brand-navy">+</span>
       </p>
       <p
         className="font-outfit text-[0.6rem] font-semibold tracking-widest uppercase"
