@@ -123,8 +123,8 @@ const NextHero = () => {
                 strokeLinecap="round"
               />
             </svg>
-            <p className="xl:text-[26px] md:text-[14px] text-[13px] font-ovo font-semibold">
-              Certified Aircraft Parts at Competitive Value
+            <p className="xl:text-[26px] text-[14px] font-ovo font-semibold">
+              Aircraft Parts at Competitive Value
             </p>
           </div>
 

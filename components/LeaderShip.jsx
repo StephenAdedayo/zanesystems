@@ -62,7 +62,7 @@ export default function Leadership() {
 
             {/* Swap div below for <Image> when photo is ready */}
             <div
-              className="absolute inset-0 flex pl-5 pt-5"
+              className="absolute inset-0 flex "
               style={{
                 background: "linear-gradient(160deg, #1c3f5a 0%, #0d151c 100%)",
               }}
