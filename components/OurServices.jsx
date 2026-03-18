@@ -113,7 +113,7 @@ export default function OurServices() {
                     {service.tags.map((tag, i) => (
                       <span
                         key={i}
-                        className="font-outfit text-[0.6rem] font-semibold tracking-widest uppercase text-indigo-600 bg-indigo-50 border border-indigo-200 px-2.5 py-0.5 rounded-full"
+                        className="font-outfit text-[0.6rem] font-semibold tracking-widest uppercase text-brand-navy/80 bg-brand-navy/10 border border-brand-navy/20 px-2.5 py-0.5 rounded-full"
                       >
                         {tag}
                       </span>

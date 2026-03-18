@@ -40,7 +40,7 @@ const Whychoose = () => {
         whileInView={{y : 0, opacity : 1}}
         viewport={{ once: true, amount: 0.2 }}
         transition={{type : "tween", duration: 0.8, delay : 0.6}}
-        className="text-white/60 font-ovo text-sm">
+        className="text-white/60  text-sm">
           Zane Systems operates as an independent aviation procurement
           and supply chain partner, delivering certified aircraft sourcing
           solutions through a trusted global supplier network. Our goal is to
@@ -54,7 +54,7 @@ const Whychoose = () => {
         viewport={{ once: true, amount: 0.2 }}
         transition={{type : "tween", duration: 0.8, delay : 0.8}}
         >
-        <Button href={"/about"} text={"Discover More"} className={"w-fit"} />
+        <Button href={"/about"} text={"Discover More"} className={"w-fit bg-brand-navy"} />
 
         </motion.div>
       </motion.div>

@@ -57,16 +57,17 @@ export default function Leadership() {
           }}
         >
           {/* Image side */}
-          <div className="relative flex-[50%] lg:w-95 w-full min-h-95 shrink-0 overflow-hidden"
+          <div className="relative flex-[50%] lg:w-95 w-full min-h-[90vh] shrink-0 overflow-hidden"
             style={{ background: "#0d151c" }}>
 
             {/* Swap div below for <Image> when photo is ready */}
             <div
-              className="absolute inset-0 flex items-center justify-center"
+              className="absolute inset-0 flex pl-5 pt-5"
               style={{
                 background: "linear-gradient(160deg, #1c3f5a 0%, #0d151c 100%)",
               }}
             >
+              
               {/* Decorative rings */}
               <div className="absolute w-65 h-65 rounded-full"
                 style={{ border: "1px solid rgba(20,81,110,0.15)" }} />
@@ -87,10 +88,10 @@ export default function Leadership() {
 
             {/* Real image — uncomment when ready */}
             <Image
-              src={assets.service}
+              src={assets.ceo}
               alt="Adebisi Akinyemi"
               fill
-              className="object-cover object-top"
+              className="object-cover opacity-85 h-full w-full"
               priority
             />
 
@@ -99,23 +100,22 @@ export default function Leadership() {
 
             {/* Top tag */}
             <div
-              className="absolute top-5 right-5 z-10 px-3 py-1.5 rounded-lg font-outfit text-[0.6rem] font-semibold tracking-widest text-white/90 uppercase bg-brand-navy/80 border border-brand-navy/15"
+              className="absolute top-5 right-5 z-10 px-3 py-1.5 rounded-lg font-outfit text-[0.65rem] font-semibold tracking-widest text-white/90 uppercase bg-brand-navy/80 border border-brand-navy/15"
               
             >
-              Founder & CEO
+              Director
             </div>
 
             {/* Name tag */}
             <motion.div {...fade(0.3)} className="absolute bottom-6 left-6 z-10">
               <p className="font-ovo text-white text-xl mb-1">Adebisi Akinyemi</p>
               <p className="font-outfit text-[0.62rem] font-semibold tracking-[0.18em] uppercase text-indigo-400">
-                Founder & Chief Executive Officer
-              </p>
+ B.sc Business Administration, M.Sc Business Information Systems             </p>
             </motion.div>
           </div>
 
           {/* Content side */}
-          <div className="flex flex-[50%] flex-col justify-between p-10 ">
+          <div className="flex flex-[50%] flex-col  justify-between p-10 ">
             <div>
               {/* Quote */}
               <motion.span
@@ -187,13 +187,13 @@ export default function Leadership() {
 
               {/* CTA */}
               <motion.div {...fade(0.3)} className="flex gap-3 flex-wrap">
-                <a
+                {/* <a
                   href="#"
                   className="inline-flex items-center gap-2 font-outfit text-sm font-semibold tracking-wide text-white px-6 py-3 rounded-xl transition-all duration-300 hover:opacity-90 hover:-translate-y-0.5"
                   style={{ background: "#14516e" }}
                 >
                   Read Full Story →
-                </a>
+                </a> */}
                 <a
                   href="/contact"
                   className="inline-flex items-center gap-2 font-outfit text-sm font-semibold tracking-wide text-brand-navy-deep px-6 py-3 rounded-xl transition-all duration-300 hover:border-brand-navy hover:text-brand-navy"
@@ -221,7 +221,7 @@ export default function Leadership() {
             <motion.div
               key={i}
               {...fade(0.2 + i * 0.15)}
-              className="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1"
+              className="group relative rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 "
               style={{
                 background: "rgba(255,255,255,0.55)",
                 border: "1px solid rgba(255,255,255,0.75)",
@@ -236,6 +236,32 @@ export default function Leadership() {
                 (e.currentTarget.style.borderColor = "rgba(255,255,255,0.75)")
               }
             >
+               
+ <div
+              className="absolute w-full h-1/2 flex items-center justify-center"
+              style={{
+                background: "linear-gradient(160deg, #1c3f5a 0%, #0d151c 100%)",
+              }}
+            >
+              
+              {/* Decorative rings */}
+              <div className="absolute w-65 h-65 rounded-full"
+                style={{ border: "1px solid rgba(20,81,110,0.15)" }} />
+              <div className="absolute w-90 h-90 rounded-full"
+                style={{ border: "1px solid rgba(20,81,110,0.07)" }} />
+              {/* Avatar initials */}
+              <div
+                className="relative z-10 w-24 h-24 rounded-full flex items-center justify-center font-ovo text-3xl"
+                style={{
+                  background: "rgba(20,81,110,0.2)",
+                  border: "2px solid rgba(20,81,110,0.4)",
+                  color: "rgba(255,255,255,0.6)",
+                }}
+              >
+                {member.initials}
+              </div>
+            </div>
+              
               {/* Top shine */}
               <div className="absolute top-0 left-[15%] right-[15%] h-px bg-linear-to-r from-transparent via-white/60 to-transparent z-10" />
 
@@ -288,9 +314,9 @@ export default function Leadership() {
                   {member.role}
                 </p>
                 <div className="h-[1.5px] w-7 bg-brand-navy rounded-full mb-3" />
-                <p className="font-outfit text-sm text-gray-600 leading-relaxed opacity-78">
+                {/* <p className="font-outfit text-sm text-gray-600 leading-relaxed opacity-78">
                   {member.bio}
-                </p>
+                </p> */}
               </div>
             </motion.div>
           ))}

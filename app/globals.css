@@ -25,8 +25,9 @@
   --color-glass: rgba(255, 255, 255, 0.12);
   --color-glassy: rgba(255, 255, 255, 0.4);
   --color-nav: #0d151c;
-  --font-outfit: "Outfit", sans-serif;
-  --font-ovo: "Ovo", sans-serif;
+  --color-logo: #d92404;
+  --font-outfit: "Nunito_Sans", sans-serif;
+  --font-ovo: "Libre_Baskerville", sans-serif;
   --breakpoint-tablet: 900px;
   --breakpoint-xs : 330px;
 

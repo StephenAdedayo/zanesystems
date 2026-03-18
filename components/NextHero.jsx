@@ -71,7 +71,7 @@ const NextHero = () => {
         viewport={{ once: true, amount: 0.2 }}
         transition={{type : "tween", duration: 0.6, delay : 0.3}}
         className="flex flex-col md:gap-8 gap-6 flex-[50%]">
-          <div className="flex items-center justify-between gap-2 text-indigo-600 bg-indigo-50 rounded-full xl:px-6 xl:py-3 px-3 py-1 text-center w-fit">
+          <div className="flex items-center justify-between gap-2 text-brand-navy/80 bg-brand-navy/5 rounded-full xl:px-6 xl:py-3 px-3 py-1 text-center w-fit">
             <svg
               width="13"
               height="14"
@@ -81,7 +81,7 @@ const NextHero = () => {
             >
               <path
                 d="M1.613 8.2a.62.62 0 0 1-.553-.341.59.59 0 0 1 .076-.637l6.048-6.118a.31.31 0 0 1 .375-.069c.061.033.11.084.137.147a.3.3 0 0 1 .014.197L6.537 4.991a.59.59 0 0 0 .07.552.61.61 0 0 0 .504.257h4.276a.62.62 0 0 1 .553.341.59.59 0 0 1-.076.637l-6.048 6.119a.31.31 0 0 1-.375.067.295.295 0 0 1-.15-.344l1.172-3.61a.59.59 0 0 0-.07-.553.61.61 0 0 0-.504-.257z"
-                stroke="#1E4BAF"
+                stroke="#14516e"
                 strokeMiterlimit="5.759"
                 strokeLinecap="round"
               />
@@ -108,7 +108,7 @@ const NextHero = () => {
         viewport={{ once: true, amount: 0.2 }}
         transition={{type : "tween", duration: 0.8, delay : 0.3}}
         className="flex flex-col md:gap-8 gap-6 flex-[50%]">
-          <div className="flex items-center justify-between gap-2 text-indigo-600 bg-indigo-50 rounded-full xl:px-6 xl:py-3 px-3 py-1 text-center w-fit">
+          <div className="flex items-center justify-between gap-2 text-brand-navy/80 bg-brand-navy/5 rounded-full xl:px-6 xl:py-3 px-3 py-1 text-center w-fit">
             <svg
               width="13"
               height="14"
@@ -118,12 +118,12 @@ const NextHero = () => {
             >
               <path
                 d="M1.613 8.2a.62.62 0 0 1-.553-.341.59.59 0 0 1 .076-.637l6.048-6.118a.31.31 0 0 1 .375-.069c.061.033.11.084.137.147a.3.3 0 0 1 .014.197L6.537 4.991a.59.59 0 0 0 .07.552.61.61 0 0 0 .504.257h4.276a.62.62 0 0 1 .553.341.59.59 0 0 1-.076.637l-6.048 6.119a.31.31 0 0 1-.375.067.295.295 0 0 1-.15-.344l1.172-3.61a.59.59 0 0 0-.07-.553.61.61 0 0 0-.504-.257z"
-                stroke="#1E4BAF"
+                stroke="#14516e"
                 strokeMiterlimit="5.759"
                 strokeLinecap="round"
               />
             </svg>
-            <p className="xl:text-[26px] text-[15px] font-ovo font-semibold">
+            <p className="xl:text-[26px] md:text-[14px] text-[13px] font-ovo font-semibold">
               Certified Aircraft Parts at Competitive Value
             </p>
           </div>
@@ -167,7 +167,7 @@ const NextHero = () => {
         </motion.div>
 
         <motion.div className="flex flex-col md:gap-8 gap-6 flex-[50%]">
-          <div className="flex items-center justify-between gap-2 text-indigo-600 bg-indigo-50 rounded-full xl:px-6 xl:py-3 px-3 py-1 text-center w-fit">
+          <div className="flex items-center justify-between gap-2 text-brand-navy/80 bg-brand-navy/5 rounded-full xl:px-6 xl:py-3 px-3 py-1 text-center w-fit">
             <svg
               width="13"
               height="14"
@@ -177,7 +177,7 @@ const NextHero = () => {
             >
               <path
                 d="M1.613 8.2a.62.62 0 0 1-.553-.341.59.59 0 0 1 .076-.637l6.048-6.118a.31.31 0 0 1 .375-.069c.061.033.11.084.137.147a.3.3 0 0 1 .014.197L6.537 4.991a.59.59 0 0 0 .07.552.61.61 0 0 0 .504.257h4.276a.62.62 0 0 1 .553.341.59.59 0 0 1-.076.637l-6.048 6.119a.31.31 0 0 1-.375.067.295.295 0 0 1-.15-.344l1.172-3.61a.59.59 0 0 0-.07-.553.61.61 0 0 0-.504-.257z"
-                stroke="#1E4BAF"
+                stroke="#14516e"
                 strokeMiterlimit="5.759"
                 strokeLinecap="round"
               />

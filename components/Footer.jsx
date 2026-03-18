@@ -1,18 +1,19 @@
 import Link from "next/link";
 import React from "react";
+import Image from "next/image";
+import { assets } from "@/assets/assets";
 
 const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-nav py-12 px-4 sm:px-6 lg:px-8">
-      <div className="w-full max-w-7xl mx-auto">
+    <footer className="bg-nav py-12 px-4 sm:px-6 lg:px-20 md:px-16">
+      <div className="w-full">
         <div className="flex flex-wrap justify-between gap-y-12 lg:gap-x-8">
           <div className="w-full md:w-[45%] lg:w-[35%] flex flex-col items-center md:items-start text-center md:text-left">
             <Link href="/">
-<p className="font-semibold font-ovo sm:text-2xl text-white text-lg bg-transparent cursor-pointer italic">
-          ZANE {" "} <span className="text-brand-navy italic">SYSTEMS</span> 
-        </p>            </Link>
+            <Image src={assets.zane_logo_white} alt="logo" className="w-20"/> 
+      </Link>
             <div className="w-full max-w-52 h-px mt-8 bg-linear-to-r from-black via-white/25 to-black"></div>
             <p className="text-sm text-white/60 mt-6 max-w-sm leading-relaxed">
               Zane Systems is a trusted aviation procurement and supply
@@ -48,7 +49,7 @@ const Footer = () => {
               >
                 Contact
               </Link>
-              {/* <Link href="#" className='text-sm text-white/60 hover:text-white transition-colors'>FAQ</Link> */}
+              
             </div>
           </div>
 
@@ -101,11 +102,7 @@ consulting          </a>
  </a>
                 </p> 
 
-                {/* <p>
-<a href="mailto:a.akinyemi@zanesystemsgs.com?subject=Inquiry%20about%20Zane%20Systems%20Services&body=Hello%20Adebisi,%20I%20would%20like%20to%20discuss..." className="text-sm text-white/60 hover:text-white transition-colors">
-a.akinyemi@zanesystemsgs.com               
- </a>
-                </p> */}
+
 
  
 
@@ -119,11 +116,7 @@ a.akinyemi@zanesystemsgs.com
 
         <div className="flex flex-col md:flex-row items-center justify-center gap-4">
           <p className="text-xs text-white/60">© {year} Zane Systems Limited</p>
-          {/* <div className="flex items-center gap-6">
-                            <a href='#' className='text-xs text-white/60 hover:text-white transition-colors'>Terms & Conditions</a>
-                            <div className='w-px h-4 bg-white/20'></div>
-                            <a href='#' className='text-xs text-white/60 hover:text-white transition-colors'>Privacy Policy</a>
-                        </div> */}
+          
         </div>
       </div>
     </footer>

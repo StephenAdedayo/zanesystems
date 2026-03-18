@@ -21,6 +21,9 @@ import service10 from "./service10.webp"
 import contact_image from "./contact_image.webp"
 import about_image from "./about_image.webp"
 import service from "./service.webp"
+import zane_logo from "./zane_logo.png"
+import zane_logo_white from "./zane_logo_white.png"
+import ceo from "./ceo.webp"
 import { Plane, Settings, Users, Globe, BarChart2 } from "lucide-react";
 
 
@@ -39,7 +42,10 @@ export const assets = {
     service4,
     contact_image,
     about_image,
-    service
+    service,
+    zane_logo,
+    zane_logo_white,
+    ceo
 }
 
 // export const services = [
@@ -322,10 +328,10 @@ export const coreValues = [
 
 export const teamMembers = [
   {
-    initials: "TM",
-    name: "Team Member Name",
-    role: "Role / Title",
-    bio: "A brief description of this team member's background, expertise, and what they bring to Zane Systems. Keep it to 2–3 sentences.",
+    initials: "FA",
+    name: "F.O Adedayo",
+    role: "LL.B, B.L, Legal Adviser",
+    // bio: "A brief description of this team member's background, expertise, and what they bring to Zane Systems. Keep it to 2–3 sentences.",
     image: null, // replace with assets.memberOne
   },
   {

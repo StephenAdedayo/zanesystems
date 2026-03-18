@@ -1,16 +1,16 @@
-import { Nunito, Outfit, Ovo } from "next/font/google";
+import {  Nunito, Outfit, Ovo, Libre_Baskerville, Nunito_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Toaster } from "react-hot-toast";
 import Script from "next/script";
 
-const nunito = Outfit({
+const nunito = Nunito_Sans({
   subsets: ["latin"], weight : ["400", "500", "600", "700"],
   variable : "--font-outfit"
 });
 
-const ovo = Ovo({
+const ovo = Libre_Baskerville({
   subsets: ["latin"], weight : ["400"],
   variable : "--font-ovo"
 });

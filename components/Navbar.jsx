@@ -1,6 +1,8 @@
 "use client";
 
+import { assets } from "@/assets/assets";
 import { Menu } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
@@ -41,13 +43,20 @@ const Navbar = () => {
 
   return (
     <section
-      className={`px-5 md:px-16 lg:px-20 fixed text-black py-5 ${isScrolled ? "text-black bg-white backdrop-blur-3xl shadow" : "text-white"} flex items-center justify-between w-full z-40 transition-all duration-300`}
+      className={`px-5 md:px-16 lg:px-20 fixed text-black py-5 ${isScrolled ? "text-black bg-white backdrop-blur-3xl shadow" : "text-white "} flex items-center justify-between w-full z-40  transition-all duration-300`}
     >
       {/* logo */}
       <Link href={"/"}>
-        <p className="font-semibold font-ovo sm:text-2xl text-lg bg-transparent cursor-pointer italic">
+        {/* <p className="font-semibold font-ovo sm:text-2xl text-lg bg-transparent cursor-pointer italic">
           ZANE {" "} <span className="text-brand-navy font-bold italic">SYSTEMS</span> 
-        </p>
+        </p> */}
+        {isScrolled ? (
+         <Image src={assets.zane_logo} alt="Zane Systems Logo" className={`${isScrolled ? "" : ""} brightness-200 contrast-200 md:w-20 w-16`} />
+        
+        ) : (
+          <Image src={assets.zane_logo_white} alt="Zane Systems Logo" className={`md:w-20 w-16`} />
+        
+        )}
         
       </Link>
 
@@ -62,7 +71,7 @@ const Navbar = () => {
           >
             {link.name}
             <div
-              className={`${isScrolled ? "bg-gray-700" : "bg-brand-navy"} h-0.5 w-0 group-hover:w-full transition-all duration-200`}
+              className={`${isScrolled ? "bg-gray-700" : "bg-logo/90"} h-0.5 w-0 group-hover:w-full transition-all duration-200`}
             />
           </Link>
         ))}
@@ -95,7 +104,7 @@ const Navbar = () => {
           <div
             className="flex items-center gap-3 z-10 bg-glass rounded-full sm:px-6 sm:py-4 px-4 py-4"
             style={{
-              background: isScrolled ? "#14516e" : "rgba(255, 255, 255, 0.12)",
+              background: isScrolled ? "#d92404" : "rgba(255, 255, 255, 0.12)",
             }}
           >
             <FaPhoneAlt color="white" className="text-20 sm:text-24" />
@@ -120,9 +129,10 @@ const Navbar = () => {
           Zane Systems
         </h2> */}
 
-        <p className="font-semibold text-white text-center font-ovo  mt-20 mb-10 text-3xl bg-transparent cursor-pointer italic">
-          ZANE {" "} <span className="text-brand-navy font-bold italic">SYSTEMS</span> 
-        </p>
+        <div className="font-ovo mt-20 mb-10 cursor-pointer flex items-center justify-center">
+<Image src={assets.zane_logo_white} alt="Zane Systems Logo" className={"w-20"} />        
+
+</div>
 
         <div onClick={() => setIsMenuOpen(false)} className="flex flex-col gap-5  ">
           {links.map((link, index) => (

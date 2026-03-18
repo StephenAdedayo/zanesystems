@@ -42,7 +42,7 @@ export default function WhyChooseService() {
         whileInView={{y:0, opacity : 1}}
         viewport={{ once: true, amount: 0.2 }}
         transition={{type : "tween", duration: 0.6, delay : 0.3}}
-            className="rounded-2xl p-12 relative overflow-hidden row-span-2"
+            className="rounded-2xl md:p-12 p-8  relative overflow-hidden row-span-2"
             style={{ background: "#0d151c" }}
           >
             {/* Atmosphere */}

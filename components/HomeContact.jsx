@@ -14,8 +14,8 @@ const HomeContact = () => {
         whileInView={{y : 0, opacity : 1}}
         viewport={{ once: true, amount: 0.2 }}
         transition={{type : "tween", duration: 0.6, delay : 0.3}}
-      className="flex items-center justify-between gap-2 text-indigo-600 bg-indigo-50 rounded-full xl:px-6 xl:py-3 px-3 py-1 text-center w-fit mb-10">
-        <MdOutlineMarkEmailRead className="text-indigo-600" />
+      className="flex items-center justify-between gap-2 text-brand-navy/80 bg-brand-navy/5 rounded-full xl:px-6 xl:py-3 px-3 py-1 text-center w-fit mb-10">
+        <MdOutlineMarkEmailRead className="text-brand-navy" />
         <h1 className="xl:text-[26px] font-ovo text-[15px] font-semibold">
           Connect with Zane Systems
         </h1>
@@ -31,7 +31,7 @@ const HomeContact = () => {
           <h2 className="bg-linear-to-r from-slate-800 to-slate-500 text-transparent bg-clip-text text-2xl font-outfit">
             Reliable Aviation Solutions Begin Here
           </h2>
-          <p className="text-gray font-ovo max-w-3xl text-sm md:text-[15px]">
+          <p className="text-gray  max-w-3xl text-sm md:text-[15px]">
             Partner with a team dedicated to strategic procurement, certified
             sourcing, and global supply coordination built around your
             operational goals.

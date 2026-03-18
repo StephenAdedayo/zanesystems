@@ -16,7 +16,7 @@ const HomeServices = () => {
         whileInView={{y : 0, opacity : 1}}
         viewport={{ once: true, amount: 0.2 }}
         transition={{type : "tween", duration: 0.5, delay : 0.2}} 
-      className="flex items-center justify-between gap-2 text-indigo-600 bg-indigo-50 rounded-full xl:px-6 xl:py-3 px-3 py-1 text-center  w-fit">
+      className="flex items-center justify-between gap-2 text-brand-navy/80 bg-brand-navy/5 rounded-full xl:px-6 xl:py-3 px-3 py-1 text-center  w-fit">
         <svg
           width="13"
           height="14"
@@ -26,7 +26,7 @@ const HomeServices = () => {
         >
           <path
             d="M1.613 8.2a.62.62 0 0 1-.553-.341.59.59 0 0 1 .076-.637l6.048-6.118a.31.31 0 0 1 .375-.069c.061.033.11.084.137.147a.3.3 0 0 1 .014.197L6.537 4.991a.59.59 0 0 0 .07.552.61.61 0 0 0 .504.257h4.276a.62.62 0 0 1 .553.341.59.59 0 0 1-.076.637l-6.048 6.119a.31.31 0 0 1-.375.067.295.295 0 0 1-.15-.344l1.172-3.61a.59.59 0 0 0-.07-.553.61.61 0 0 0-.504-.257z"
-            stroke="#1E4BAF"
+            stroke="#14516e"
             strokeMiterlimit="5.759"
             strokeLinecap="round"
           />
@@ -103,7 +103,7 @@ const HomeServices = () => {
                         {service.tags.map((tag, i) => (
                           <span
                             key={i}
-                            className="font-outfit text-[0.6rem] font-semibold tracking-widest uppercase text-indigo-600 bg-indigo-50 border border-indigo-200 px-2.5 py-0.5 rounded-full"
+                            className="font-outfit text-[0.6rem] font-semibold tracking-widest uppercase text-brand-navy bg-brand-navy/10 border border-brand-navy/15 px-2.5 py-0.5 rounded-full"
                           >
                             {tag}
                           </span>
@@ -139,7 +139,7 @@ const HomeServices = () => {
               ))}
             </div>
         
-        <Button href={"/services"} text={"View all"}/>
+        <Button href={"/services"} text={"View all"} className="bg-brand-navy"/>
     </div>
   );
 };

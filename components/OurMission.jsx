@@ -70,7 +70,7 @@ const OurMission = () => {
         whileInView={{y:0, opacity : 1}}
         viewport={{ once: true, amount: 0.2 }}
         transition={{type : "tween", duration: 0.4, delay : 0.2}}
-          className="border-l-2  border-indigo-600 bg-indigo-50 px-4 py-4 mt-5">
+          className="border-l-2  border-brand-navy bg-brand-navy/5 px-4 py-4 mt-5">
             <p className="italic font-ovo">
               "We don't just supply parts. We supply the assurance that every
               aircraft we touch will fly safely."
