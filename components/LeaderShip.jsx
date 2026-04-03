@@ -58,7 +58,8 @@ export default function Leadership() {
         >
           {/* Image side */}
           <div className="relative flex-[50%] lg:w-95 w-full min-h-[90vh] shrink-0 overflow-hidden"
-            style={{ background: "#0d151c" }}>
+            style={{ background: "#0d151c" }}
+            >
 
             {/* Swap div below for <Image> when photo is ready */}
             <div
@@ -74,7 +75,7 @@ export default function Leadership() {
               <div className="absolute w-90 h-90 rounded-full"
                 style={{ border: "1px solid rgba(20,81,110,0.07)" }} />
               {/* Avatar initials */}
-              <div
+              {/* <div
                 className="relative z-10 w-24 h-24 rounded-full flex items-center justify-center font-ovo text-3xl"
                 style={{
                   background: "rgba(20,81,110,0.2)",
@@ -83,7 +84,7 @@ export default function Leadership() {
                 }}
               >
                 AA
-              </div>
+              </div> */}
             </div>
 
             {/* Real image — uncomment when ready */}
@@ -91,12 +92,12 @@ export default function Leadership() {
               src={assets.ceo}
               alt="Adebisi Akinyemi"
               fill
-              className="object-cover opacity-85 h-full w-full"
+              className="object-cover  h-full w-full mix-blend"
               priority
             />
 
             {/* Gradient overlay */}
-            <div className="absolute inset-0 bg-linear-to-t from-nav via-transparent to-transparent" />
+            {/* <div className="absolute inset-0 bg-linear-to-t from-nav via-transparent to-transparent" /> */}
 
             {/* Top tag */}
             <div

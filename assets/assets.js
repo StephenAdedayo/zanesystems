@@ -24,6 +24,7 @@ import service from "./service.webp"
 import zane_logo from "./zane_logo.png"
 import zane_logo_white from "./zane_logo_white.png"
 import ceo from "./ceo.webp"
+import director from "./director.png"
 import { Plane, Settings, Users, Globe, BarChart2 } from "lucide-react";
 
 
@@ -45,7 +46,8 @@ export const assets = {
     service,
     zane_logo,
     zane_logo_white,
-    ceo
+    ceo,
+    director
 }
 
 // export const services = [
