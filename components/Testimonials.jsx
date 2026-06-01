@@ -1,103 +1,188 @@
-"use client"
+"use client";
 
-import { motion } from 'motion/react'
-import React from 'react'
-
+import React, { useState, useEffect } from "react";
+import { motion } from "motion/react";
 
 const Testimonials = () => {
+  const testimonials = [
+    {
+      id: 1,
+      date: "Jun 1, 2026",
+      text: "“Zane Systems streamlined our entire parts procurement pipeline. Their professionalism, technical expertise, and dedication to global compliance standards are top-tier.”",
+      name: "Captain Abayomi Coker",
+      role: "Managing Director at Quorum Aviation",
+    //   img: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200",
+    },
+    
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const handleNext = () => {
+    setCurrentIndex((prev) => (prev + 3 >= testimonials.length ? 0 : prev + 3));
+  };
+
+  const handlePrev = () => {
+    setCurrentIndex((prev) =>
+      prev - 3 < 0 ? Math.max(testimonials.length - 3, 0) : prev - 3,
+    );
+  };
+
+  useEffect(() => {
+    if (!isMobile) return;
+
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) =>
+        prev + 1 >= testimonials.length ? 0 : prev + 1,
+      );
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [isMobile, testimonials.length]);
+
   return (
-    <div className='px-5 md:px-16 lg:px-20'>
+    <>
+      <section className="py-20 px-5 md:px-16 lg:px-20">
+        <div className="w-full sm:max-w-6xl mx-auto">
+          <div className="flex justify-between items-center mb-14">
+            <motion.h1
+              initial={{ y: -20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ type: "tween", duration: 0.6, delay: 0.3 }}
+              className="text-neutral-900 font-medium text-4xl md:text-[40px] text-center md:text-left"
+            >
+              What our clients appreciate most
+            </motion.h1>
 
-<div className='flex flex-col justify-center items-center mb-10'>
-     <motion.div 
-        initial={{y: -20, opacity : 0}}
-        whileInView={{y : 0, opacity : 1}}
-        viewport={{ once: true, amount: 0.2 }}
-        transition={{type : "tween", duration: 0.6, delay : 0.3}}
-     className="flex items-center  gap-2 text-brand-navy/80 bg-brand-navy/5 rounded-full xl:px-6 xl:py-3 px-3 py-1">
-                    <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1.613 8.2a.62.62 0 0 1-.553-.341.59.59 0 0 1 .076-.637l6.048-6.118a.31.31 0 0 1 .375-.069c.061.033.11.084.137.147a.3.3 0 0 1 .014.197L6.537 4.991a.59.59 0 0 0 .07.552.61.61 0 0 0 .504.257h4.276a.62.62 0 0 1 .553.341.59.59 0 0 1-.076.637l-6.048 6.119a.31.31 0 0 1-.375.067.295.295 0 0 1-.15-.344l1.172-3.61a.59.59 0 0 0-.07-.553.61.61 0 0 0-.504-.257z" stroke="#1E4BAF" strokeMiterlimit="5.759"
-                            strokeLinecap="round" />
-                    </svg>
-                    <span className='text-[15px] xl:text-[26px]'>Testimonials</span>
-             </motion.div>
+            <motion.div
+               initial={{ y: -20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ type: "tween", duration: 0.6, delay: 0.3 }}
+            className="hidden md:flex gap-2">
+              <div
+                onClick={handlePrev}
+                className="h-10 w-10 rounded-lg bg-neutral-100 border border-neutral-200 flex items-center justify-center cursor-pointer hover:bg-neutral-200 transition-all text-neutral-500"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="lucide lucide-arrow-left-icon lucide-arrow-left"
+                >
+                  <path d="m12 19-7-7 7-7" />
+                  <path d="M19 12H5" />
+                </svg>
+              </div>
+              <div
+                onClick={handleNext}
+                className="h-10 w-10 rounded-lg bg-neutral-100 border border-neutral-200 flex items-center justify-center cursor-pointer hover:bg-neutral-200 transition-all text-neutral-500"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="lucide lucide-arrow-right-icon lucide-arrow-right"
+                >
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
+              </div>
+            </motion.div>
+          </div>
 
-                <motion.h1
-                        initial={{y: 30, opacity : 0}}
-        whileInView={{y : 0, opacity : 1}}
-        viewport={{ once: true, amount: 0.2 }}
-        transition={{type : "tween", duration: 0.8, delay : 0.4}}
-                    className="text-2xl font-medium bg-linear-to-r from-slate-800 to-slate-500 text-transparent text-center bg-clip-text mt-4">
-                    Don't just take our words
-                </motion.h1>
-                <motion.p 
-                        initial={{y: 30, opacity : 0}}
-        whileInView={{y : 0, opacity : 1}}
-        viewport={{ once: true, amount: 0.2 }}
-        transition={{type : "tween", duration: 0.8, delay : 0.5}}
-                className="text-slate-500 font-ovo text-center mt-4 max-w-2xl">
-                    Hear what our users say about us. We're always looking for ways to improve. If you have a positive
-                    experience with us, leave a review.
-                </motion.p>
-                </div>
-    <div className="flex flex-wrap items-center justify-center gap-6 my-20">
+          <div className="mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 md:mt-6">
+            {testimonials
+              .slice(
+                currentIndex,
+                isMobile ? currentIndex + 1 : currentIndex + 3,
+              )
+              .map((item) => (
+                <motion.div
+                              initial={{ y: 30, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ type: "tween", duration: 0.7, delay: 0.3 }}
+                  key={item.id}
+                  className="bg-zinc-50 hover:-translate-y-1 transition duration-300 border border-zinc-200 rounded-2xl p-6 space-y-6"
+                >
+                  <div className="flex items-start justify-between">
+                    <div className="flex">
+                      {Array(5)
+                        .fill(0)
+                        .map((_, i) => (
+                          <svg
+                            key={i}
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="15"
+                            height="15"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            className="lucide lucide-star text-transparent fill-[#FF8F20]"
+                            aria-hidden="true"
+                          >
+                            <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                          </svg>
+                        ))}
+                    </div>
+                    <p className="text-xs text-neutral-500">{item.date}</p>
+                  </div>
 
+                  <p className="text-sm/6 text-neutral-600">{item.text}</p>
 
+                  <div className="flex items-center gap-4 mt-4">
+                    {/* <img src={item.img} alt="User Avatar" className='w-13 h-13 rounded-full object-cover'/> */}
+                    <div>
+                      <p className="text-sm text-neutral-700">{item.name}</p>
+                      <p className="text-xs font-medium text-neutral-500">
+                        {item.role}
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+          </div>
+        </div>
+        <div className="hidden max-[768px]:flex items-center justify-center mt-5 space-x-2">
+          {testimonials.map((_, index) => (
+            <span
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={`w-3 h-3 rounded-full transition-all ${
+                index === currentIndex ? "bg-neutral-800" : "bg-neutral-300"
+              }`}
+            ></span>
+          ))}
+        </div>
+      </section>
+    </>
+  );
+};
 
-<motion.div 
-        initial={{y: 30, opacity : 0}}
-        whileInView={{y : 0, opacity : 1}}
-        viewport={{ once: true, amount: 0.2 }}
-        transition={{type : "tween", duration: 0.8, delay : 0.8}}
-className="max-w-80 bg-black text-white rounded-2xl">
-    <div className="relative -mt-px overflow-hidden rounded-2xl">
-        <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=600" alt="" className="h-67.5 w-full rounded-2xl hover:scale-105 transition-all duration-300 object-cover object-top" />
-        <div className="absolute bottom-0 z-10 h-60 w-full bg-linear-to-t pointer-events-none from-black to-transparent"></div>
-    </div>
-    <div className="px-4 pb-4">
-        <p className="font-medium border-b border-gray-600 pb-5">“Zane Systems streamlined our aircraft parts procurement with speed, precision, and full transparency.”</p>
-        <p className="mt-4">— Operations Director</p>
-        <p className="text-sm font-medium bg-linear-to-r from-[#8B5CF6] via-[#E0724A] to-[#9938CA] text-transparent bg-clip-text">Aviation Maintenance</p>
-    </div>
-</motion.div>
-
-<motion.div
-        initial={{y: 30, opacity : 0}}
-        whileInView={{y : 0, opacity : 1}}
-        viewport={{ once: true, amount: 0.2 }}
-        transition={{type : "tween", duration: 0.8, delay : 0.8}}
- className="max-w-80 bg-black text-white rounded-2xl">
-    <div className="relative -mt-px overflow-hidden rounded-2xl">
-        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=600" alt="" className="h-67.5 w-full rounded-2xl hover:scale-105 transition-all duration-300 object-cover object-top" />
-        <div className="absolute bottom-0 z-10 h-60 w-full bg-linear-to-t pointer-events-none from-black to-transparent"></div>
-    </div>
-    <div className="px-4 pb-4">
-        <p className="font-medium border-b border-gray-600 pb-5">“Their vendor management and logistics coordination improved our turnaround time significantly.”</p>
-        <p className="mt-4">— Supply Chain Manager</p>
-        <p className="text-sm font-medium bg-linear-to-r from-[#8B5CF6] via-[#E0724A] to-[#9938CA] text-transparent bg-clip-text">Airline Operations</p>
-    </div>
-</motion.div>
-
-<motion.div 
-        initial={{y: 30, opacity : 0}}
-        whileInView={{y : 0, opacity : 1}}
-        viewport={{ once: true, amount: 0.2 }}
-        transition={{type : "tween", duration: 0.8, delay : 0.8}}
-className="max-w-80 bg-black text-white rounded-2xl">
-    <div className="relative -mt-px overflow-hidden rounded-2xl">
-        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=600&h=600&auto=format&fit=crop" alt="" className="h-67.5 w-full rounded-2xl hover:scale-105 transition-all duration-300 object-cover object-top" />
-        <div className="absolute bottom-0 z-10 h-60 w-full bg-linear-to-t pointer-events-none from-black to-transparent"></div>
-    </div>
-    <div className="px-4 pb-4">
-        <p className="font-medium border-b border-gray-600 pb-5">“Professional, reliable, and compliant — a procurement partner we confidently depend on.”</p>
-        <p className="mt-4">— Fleet Support Lead</p>
-        <p className="text-sm font-medium bg-linear-to-r from-[#8B5CF6] via-[#E0724A] to-[#9938CA] text-transparent bg-clip-text">MRO Services</p>
-    </div>
-</motion.div>
-            </div>
-                </div>
-
-  )
-}
-
-export default Testimonials
+export default Testimonials;

@@ -11,7 +11,7 @@ const ServiceOverview = ({service}) => {
   {/* Left — details text */}
   <div>
     <motion.div
-                initial={{y:-20, opacity : 0}}
+        initial={{y:-20, opacity : 0}}
         whileInView={{y: 0, opacity : 1}}
         viewport={{ once: true, amount: 0.2 }}
         transition={{type : "tween", duration: 0.2, delay : 0.1}}
@@ -71,7 +71,7 @@ const ServiceOverview = ({service}) => {
     </div>
 
     {/* Floating stat card */}
-    <div
+    {/* <div
       className="absolute -bottom-5 -right-5 rounded-2xl px-6 py-5"
       style={{
         background: "#0d151c",
@@ -88,7 +88,7 @@ const ServiceOverview = ({service}) => {
       >
         Years Experience
       </p>
-    </div>
+    </div> */}
 
   </motion.div>
 </div>

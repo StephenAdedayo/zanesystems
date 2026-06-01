@@ -14,7 +14,7 @@ const Footer = () => {
         <div className="flex flex-wrap justify-between gap-y-12 lg:gap-x-8">
           <div className="w-full md:w-[45%] lg:w-[35%] flex flex-col items-center md:items-start text-center md:text-left">
             <Link href="/">
-              <Image src={assets.zane_logo_white} alt="logo" className="w-20" />
+              <Image src={assets.zane_logo_white} alt="logo" className="w-20" priority/>
             </Link>
             <div className="w-full max-w-52 h-px mt-8 bg-linear-to-r from-black via-white/25 to-black"></div>
             <p className="text-sm text-white/60 mt-6 max-w-sm leading-relaxed">
@@ -39,7 +39,7 @@ const Footer = () => {
                 href="/about"
                 className="text-sm text-white/60 hover:text-white transition-colors"
               >
-                About
+                About Us
               </Link>
               <Link
                 href="/services"
@@ -90,7 +90,7 @@ const Footer = () => {
                 href="/services/consulting"
                 className="text-sm text-white/60 hover:text-white transition-colors"
               >
-                consulting{" "}
+                Consulting{" "}
               </a>
             </div>
           </div>

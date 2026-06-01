@@ -15,7 +15,7 @@ const ContactHero = () => {
         <Image src={assets.contact_image} fill priority alt="contact_image" className="object-center object-cover"/>
      </div>
 
-      <div className="bg-black/80 absolute px-5 md:px-16 lg:px-20 inset-0 flex flex-col items-center justify-center ">
+      <div className="bg-black/50 absolute px-5 md:px-16 lg:px-20 inset-0 flex flex-col items-center justify-center ">
         <motion.div 
            initial={{y: -20, opacity : 0}}
         animate={{y : 0, opacity : 1}}

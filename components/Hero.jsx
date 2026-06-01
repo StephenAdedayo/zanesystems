@@ -14,11 +14,11 @@ const Hero = () => {
         loop
         muted
         playsInline
-        src={"https://res.cloudinary.com/dfuse3jtq/video/upload/airplane_qmrrxh"}
+        src={"https://res.cloudinary.com/dfuse3jtq/video/upload/v1780333432/5778796-uhd_3840_2160_24fps_cawnay.mp4"}
         className="object-cover absolute inset-0 h-screen w-full"
       ></video>
 
-      <div className="absolute inset-0 bg-black/80 " />
+      <div className="absolute inset-0 bg-black/50 " />
 
 
       <div className="absolute inset-0 space-y-8 px-5 md:px-16 lg:px-20 bottom-0 z-0 w-full flex flex-col justify-center items-center">

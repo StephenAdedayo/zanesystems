@@ -62,17 +62,18 @@ export default function OurServices() {
               style={{
                 background: "rgba(255, 255, 255, 0.55)",
                 border: "1px solid rgba(255, 255, 255, 0.75)",
+                borderColor:"rgba(20,81,110,0.45)",
                 boxShadow: "0 4px 24px rgba(0,0,0,0.06)",
                 backdropFilter: "blur(16px)",
                 WebkitBackdropFilter: "blur(16px)",
               }}
               onMouseEnter={e => {
-                e.currentTarget.style.borderColor = "rgba(20,81,110,0.45)";
+                // e.currentTarget.style.borderColor = "";
                 e.currentTarget.style.boxShadow =
                   "0 16px 48px rgba(0,0,0,0.10), 0 0 0 1px rgba(20,81,110,0.15)";
               }}
               onMouseLeave={e => {
-                e.currentTarget.style.borderColor = "rgba(255,255,255,0.75)";
+                // e.currentTarget.style.borderColor = "rgba(255,255,255,0.75)";
                 e.currentTarget.style.boxShadow = "0 4px 24px rgba(0,0,0,0.06)";
               }}
             >

@@ -26,6 +26,8 @@ export const metadata = {
     default: "Zane Systems | Aircraft Procurement & Aviation Solutions",
     template: "%s | Zane Systems",
   },
+  siteName: "Zane Systems",
+  applicationName: "Zane Systems",
   description: "Zane Systems Limited is a strategic aviation procurement partner specializing in aircraft sales, certified parts sourcing, and global supply chain logistics.",
   keywords: ["Aviation", "Aircraft Procurement", "Parts Sourcing", "Zane Systems", "Aircraft Sales"],
 

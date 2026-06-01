@@ -45,24 +45,31 @@ const HomeServices = () => {
 
      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 items-center justify-center w-full gap-10 my-10 ">
               {services.slice(0,3).map((service, index) => (
+                <motion.div
+                 key={index}
+
+                 initial={{y: 30, opacity : 0}}
+        whileInView={{y : 0, opacity : 1}}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{type : "tween", duration: 0.6, delay : 0.3}}>
                 <Link
-                  key={index}
                   href={`/services/${service.slug}`}
-                  className="group relative block rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1"
+                  className="group relative block rounded-2xl border border-zinc-200 overflow-hidden transition-all duration-300 hover:-translate-y-1 "
                   style={{
                     background: "rgba(255, 255, 255, 0.55)",
-                    border: "1px solid rgba(255, 255, 255, 0.75)",
+                    // border: "1px solid rgba(255, 255, 255, 0.75)",
+                    // borderColor: "rgba(20,81,110,0.45)",
                     boxShadow: "0 4px 24px rgba(0,0,0,0.06)",
                     backdropFilter: "blur(16px)",
                     WebkitBackdropFilter: "blur(16px)",
                   }}
                   onMouseEnter={e => {
-                    e.currentTarget.style.borderColor = "rgba(20,81,110,0.45)";
+                    // e.currentTarget.style.borderColor = "rgba(20,81,110,0.45)";
                     e.currentTarget.style.boxShadow =
                       "0 16px 48px rgba(0,0,0,0.10), 0 0 0 1px rgba(20,81,110,0.15)";
                   }}
                   onMouseLeave={e => {
-                    e.currentTarget.style.borderColor = "rgba(255,255,255,0.75)";
+                    // e.currentTarget.style.borderColor = "rgba(255,255,255,0.75)";
                     e.currentTarget.style.boxShadow = "0 4px 24px rgba(0,0,0,0.06)";
                   }}
                 >
@@ -73,10 +80,7 @@ const HomeServices = () => {
                   <div className="absolute left-0 top-3 bottom-3 w-0.75 rounded-r-full bg-brand-navy scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-center" />
     
                   <motion.div 
-                  initial={{y: 30, opacity : 0}}
-        whileInView={{y : 0, opacity : 1}}
-        viewport={{ once: true, amount: 0.2 }}
-        transition={{type : "tween", duration: 0.6, delay : 0.3}}
+                 
                   className="items-center gap-6 p-7">
     
                     {/* Index */}
@@ -136,6 +140,7 @@ const HomeServices = () => {
     
                   </motion.div>
                 </Link>
+                </motion.div>
               ))}
             </div>
         

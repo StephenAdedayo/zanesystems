@@ -46,7 +46,7 @@ export default function Leadership() {
         {/* ── DIRECTOR CARD ── */}
         <motion.div
           {...fade(0.2)}
-          className="flex flex-col lg:flex-row rounded-2xl overflow-hidden mb-6"
+          className="flex flex-col lg:flex-row gap-10  rounded-2xl overflow-hidden p-6 mb-6"
           style={{
             background: "rgba(255,255,255,0.55)",
             border: "1px solid rgba(255,255,255,0.75)",
@@ -57,82 +57,38 @@ export default function Leadership() {
           }}
         >
           {/* Image side */}
-          <div className="relative flex-[50%] lg:w-95 w-full min-h-[90vh] shrink-0 overflow-hidden"
-            style={{ background: "#0d151c" }}
-            >
-
-            {/* Swap div below for <Image> when photo is ready */}
-            <div
-              className="absolute inset-0 flex "
-              style={{
-                background: "linear-gradient(160deg, #1c3f5a 0%, #0d151c 100%)",
-              }}
-            >
-              
-              {/* Decorative rings */}
-              <div className="absolute w-65 h-65 rounded-full"
-                style={{ border: "1px solid rgba(20,81,110,0.15)" }} />
-              <div className="absolute w-90 h-90 rounded-full"
-                style={{ border: "1px solid rgba(20,81,110,0.07)" }} />
-              {/* Avatar initials */}
-              {/* <div
-                className="relative z-10 w-24 h-24 rounded-full flex items-center justify-center font-ovo text-3xl"
-                style={{
-                  background: "rgba(20,81,110,0.2)",
-                  border: "2px solid rgba(20,81,110,0.4)",
-                  color: "rgba(255,255,255,0.6)",
-                }}
-              >
-                AA
-              </div> */}
-            </div>
-
-            {/* Real image — uncomment when ready */}
+          <div className="xl:w-125 lg:w-100  w-full flex items-center justify-center min-h-[70vh] relative overflow-hidden"
+            >         
             <Image
               src={assets.ceo}
               alt="Adebisi Akinyemi"
-              fill
-              className="object-cover  h-full w-full mix-blend"
+              className="rounded-lg w-full h-full"
               priority
             />
-
-            {/* Gradient overlay */}
-            {/* <div className="absolute inset-0 bg-linear-to-t from-nav via-transparent to-transparent" /> */}
-
-            {/* Top tag */}
-            <div
-              className="absolute top-5 right-5 z-10 px-3 py-1.5 rounded-lg font-outfit text-[0.65rem] font-semibold tracking-widest text-white/90 uppercase bg-brand-navy/80 border border-brand-navy/15"
-              
-            >
-              Director
-            </div>
-
-            {/* Name tag */}
-            <motion.div {...fade(0.3)} className="absolute bottom-6 left-6 z-10">
-              <p className="font-ovo text-white text-xl mb-1">Adebisi Akinyemi</p>
-              <p className="font-outfit text-[0.62rem] font-semibold tracking-[0.18em] uppercase text-indigo-400">
- B.sc Business Administration, M.Sc Business Information Systems             </p>
-            </motion.div>
           </div>
 
           {/* Content side */}
-          <div className="flex flex-[50%] flex-col  justify-between p-10 ">
+          <div className="flex flex-1 flex-col justify-between  ">
             <div>
               {/* Quote */}
+              <motion.p
+              {...fade(0.4)}
+              className="mb-5 text-2xl font-semibold text-brand-navy-deep font-ovo">
+                CEO of Zane Systems <br />
+                <span className="text-base">Adebisi Akinyemi </span>
+              </motion.p>
               <motion.span
                 {...fade(0.4)}
-                className="font-ovo text-5xl leading-none mb-3 block opacity-20 text-brand-navy"
+                className="font-ovo text-5xl leading-none  block opacity-20 text-brand-navy"
               >
                 "
               </motion.span>
 
               <motion.p
                 {...fade(0.4)}
-                className="font-ovo text-lg text-brand-navy-deep leading-relaxed mb-5"
+                className="font-outfit text-sm text-brand-navy-deep leading-[1.85] mb-5"
               >
-                We built Zane Systems on one belief — that the aviation industry
-                deserves a parts supplier that never compromises on quality or
-                trust.
+                As the Founder and Chief Executive Officer of the company, Adebisi Akinyemi brings strategic leadership, industry insight, and a strong commitment to excellence in aviation procurement and outsourcing services. Since establishing the company in 2025, he has been instrumental in building a trusted procurement network that connects Nigerian aviation operators with reputable aircraft parts suppliers across Europe.
               </motion.p>
 
               <motion.div
@@ -142,49 +98,21 @@ export default function Leadership() {
 
               <motion.p
                 {...fade(0.3)}
-                className="font-outfit text-sm text-gray leading-[1.85] opacity-80"
+                className="font-outfit text-sm text-gray leading-[1.85] opacity-80 mb-5"
               >
-                We founded Zane Systems with a clear vision — to
-                bring world-class, fully traceable aircraft components and
-                procurement expertise to airlines and MRO facilities across the
-                globe. Since launching, the company has rapidly built a
-                reputation for reliability, compliance, and precision in every
-                engagement.
+                With a focus on quality, reliability, and regulatory compliance, Adebisi Akinyemi has positioned the company as a dependable sourcing partner for airlines, helicopter operators, maintenance organizations, and private aircraft owners. Under his leadership, the company specializes in identifying, procuring, and delivering certified aircraft components from approved and trusted European suppliers, ensuring clients receive genuine parts that meet international aviation standards.
+              </motion.p>
+
+
+              <motion.p
+                {...fade(0.3)}
+                className="font-outfit text-sm text-gray leading-[1.85]  opacity-80"
+              >
+                His vision is to simplify the aircraft parts procurement process for operators in Nigeria and across Africa by providing efficient sourcing solutions, transparent transactions, and exceptional customer service. Through strategic partnerships and a customer-centric approach, he continues to drive the company's growth and reputation within the aviation industry.
               </motion.p>
             </div>
 
             <div className="mt-10  w-full">
-              {/* Stats */}
-              <motion.div
-                {...fade(0.3)}
-                className="flex sm:flex-row flex-col rounded-xl w-full  overflow-hidden mb-7"
-                style={{
-                  border: "1px solid rgba(0,0,0,0.06)",
-                }}
-              >
-                {[
-                  { num: "1", suffix: "yr", label: "In Operation" },
-                  { num: "12", suffix: "+", label: "Countries Reached" },
-                  { num: "100", suffix: "+", label: "Parts Supplied" },
-                  // { num: "10", suffix: "+", label: "Clients Served" },
-                ].map((stat, i) => (
-                  <div
-                    key={i}
-                    className="flex-1 py-3 px-5 text-center"
-                    style={{
-                      borderLeft: i !== 0 ? "1px solid rgba(0,0,0,0.06)" : "none",
-                    }}
-                  >
-                    <p className="font-ovo text-xl text-brand-navy-deep leading-none mb-1">
-                      {stat.num}
-                      <span className="text-brand-navy">{stat.suffix}</span>
-                    </p>
-                    <p className="font-outfit text-[10px] font-semibold tracking-widest uppercase text-gray-600 opacity-50">
-                      {stat.label}
-                    </p>
-                  </div>
-                ))}
-              </motion.div>
 
               {/* CTA */}
               <motion.div {...fade(0.3)} className="flex gap-3 flex-wrap">

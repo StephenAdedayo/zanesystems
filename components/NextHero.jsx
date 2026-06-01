@@ -59,7 +59,7 @@ const NextHero = () => {
         transition={{type :"tween", duration: 0.6, delay:0.3}}
         className="flex-[50%] overflow-hidden">
           <Image
-            src={assets.nexthero_image}
+            src={assets.leaders}
             alt="next_hero"
             className="rounded-3xl hover:scale-105 transition-all ease-in duration-300"
           />
@@ -160,7 +160,7 @@ const NextHero = () => {
         transition={{type :"tween", duration: 0.6, delay:0.3}}
         className="flex-[50%] overflow-hidden">
           <Image
-            src={assets.trust}
+            src={assets.nexthero_image}
             alt="next_hero"
             className="rounded-3xl hover:scale-105 transition-all ease-in duration-300"
           />

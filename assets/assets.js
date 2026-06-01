@@ -24,7 +24,7 @@ import service from "./service.webp"
 import zane_logo from "./zane_logo.png"
 import zane_logo_white from "./zane_logo_white.png"
 import ceo from "./ceo.webp"
-import director from "./director.png"
+import leaders from "./leaders.webp"
 import { Plane, Settings, Users, Globe, BarChart2 } from "lucide-react";
 
 
@@ -47,7 +47,7 @@ export const assets = {
     zane_logo,
     zane_logo_white,
     ceo,
-    director
+    leaders
 }
 
 // export const services = [
@@ -330,17 +330,17 @@ export const coreValues = [
 
 export const teamMembers = [
   {
-    initials: "FA",
+    initials: "F.A",
     name: "F.O Adedayo",
     role: "LL.B, B.L, Legal Adviser",
     // bio: "A brief description of this team member's background, expertise, and what they bring to Zane Systems. Keep it to 2–3 sentences.",
     image: null, // replace with assets.memberOne
   },
   {
-    initials: "TM",
-    name: "Team Member Name",
-    role: "Role / Title",
-    bio: "A brief description of this team member's background, expertise, and what they bring to Zane Systems. Keep it to 2–3 sentences.",
+    initials: "A.A",
+    name: "Adeola Albert",
+    role: "Business Development Manager",
+    // bio: "A brief description of this team member's background, expertise, and what they bring to Zane Systems. Keep it to 2–3 sentences.",
     image: null, // replace with assets.memberTwo
   },
 ];

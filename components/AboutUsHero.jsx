@@ -15,7 +15,7 @@ const AboutUsHero = () => {
              <Image src={assets.about_image} fill priority alt="about_image" className="object-center object-cover"/>
           </div>
 
-      <div className="bg-black/80 px-5 md:px-16 lg:px-20 absolute inset-0 flex flex-col items-center justify-center  text pt-10">
+      <div className="bg-black/50 px-5 md:px-16 lg:px-20 absolute inset-0 flex flex-col items-center justify-center  text pt-10">
         <motion.div
         initial={{y: -20, opacity : 0}}
         animate={{y : 0, opacity : 1}}

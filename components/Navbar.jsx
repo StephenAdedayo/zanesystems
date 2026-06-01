@@ -51,10 +51,10 @@ const Navbar = () => {
           ZANE {" "} <span className="text-brand-navy font-bold italic">SYSTEMS</span> 
         </p> */}
         {isScrolled ? (
-         <Image src={assets.zane_logo} alt="Zane Systems Logo" className={`${isScrolled ? "" : ""} brightness-200 contrast-200 md:w-20 w-16`} />
+         <Image src={assets.zane_logo} alt="Zane Systems Logo" className={`${isScrolled ? "" : ""} brightness-200 contrast-200 w-16`} priority/>
         
         ) : (
-          <Image src={assets.zane_logo_white} alt="Zane Systems Logo" className={`md:w-20 w-16`} />
+          <Image src={assets.zane_logo_white} alt="Zane Systems Logo" className={`w-16`} priority/>
         
         )}
         
@@ -62,7 +62,7 @@ const Navbar = () => {
 
       {/* Navlinks desktop*/}
 
-      <div className="lg:flex justify-between space-x-8 items-center hidden">
+      <div className="lg:flex  justify-between space-x-10 items-center hidden">
         {links.map((link, index) => (
           <Link
             key={index}
