@@ -16,7 +16,7 @@ const Navbar = () => {
 
   const links = [
     { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
+    { name: "About Us", href: "/about" },
     { name: "Services", href: "/services" },
     { name: "Contact Us", href: "/contact" },
   ];
@@ -43,7 +43,7 @@ const Navbar = () => {
 
   return (
     <section
-      className={`px-5 md:px-16 lg:px-20 fixed text-black py-5 ${isScrolled ? "text-black bg-white backdrop-blur-3xl shadow" : "text-white "} flex items-center justify-between w-full z-40  transition-all duration-300`}
+      className={`px-5 md:px-16 lg:px-20 fixed text-black sm:py-5 py-3 ${isScrolled ? "text-black bg-white backdrop-blur-3xl shadow" : "text-white "} flex items-center justify-between w-full z-40  transition-all duration-300`}
     >
       {/* logo */}
       <Link href={"/"}>
@@ -51,7 +51,7 @@ const Navbar = () => {
           ZANE {" "} <span className="text-brand-navy font-bold italic">SYSTEMS</span> 
         </p> */}
         {isScrolled ? (
-         <Image src={assets.zane_logo} alt="Zane Systems Logo" className={`${isScrolled ? "" : ""} brightness-200 contrast-200 w-16`} priority/>
+         <Image src={assets.zane_logo} alt="Zane Systems Logo" className={`${isScrolled ? "" : ""} brightness-200 contrast-200 w-16 `} priority/>
         
         ) : (
           <Image src={assets.zane_logo_white} alt="Zane Systems Logo" className={`w-16`} priority/>

@@ -12,8 +12,7 @@ const Testimonials = () => {
       name: "Captain Abayomi Coker",
       role: "Managing Director at Quorum Aviation",
     //   img: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200",
-    },
-    
+    }
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -126,7 +125,7 @@ const Testimonials = () => {
               viewport={{ once: true, amount: 0.2 }}
               transition={{ type: "tween", duration: 0.7, delay: 0.3 }}
                   key={item.id}
-                  className="bg-zinc-50 hover:-translate-y-1 transition duration-300 border border-zinc-200 rounded-2xl p-6 space-y-6"
+                  className="bg-zinc-50 hover:-translate-y-1 transition-all duration-300 delay-100 border border-zinc-200 rounded-2xl p-6 space-y-6"
                 >
                   <div className="flex items-start justify-between">
                     <div className="flex">

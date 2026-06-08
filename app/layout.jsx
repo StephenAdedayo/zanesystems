@@ -26,7 +26,6 @@ export const metadata = {
     default: "Zane Systems | Aircraft Procurement & Aviation Solutions",
     template: "%s | Zane Systems",
   },
-  siteName: "Zane Systems",
   applicationName: "Zane Systems",
   description: "Zane Systems Limited is a strategic aviation procurement partner specializing in aircraft sales, certified parts sourcing, and global supply chain logistics.",
   keywords: ["Aviation", "Aircraft Procurement", "Parts Sourcing", "Zane Systems", "Aircraft Sales"],
@@ -36,12 +35,17 @@ export const metadata = {
   },
 
   openGraph: {
-    title: "Zane Systems | Global Aviation Solutions",
+    title: "Zane Systems Global Services",
     description: "Strategic aircraft procurement and meticulous supply chain coordination.",
     url: "https://zanesystemsgs.com",
     siteName: "Zane Systems",
     locale: "en_US",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Zane Systems | Global Aviation Solutions",
+    description: "Strategic aircraft procurement and meticulous supply chain coordination.",
   },
   robots: {
     index: true,
@@ -73,10 +77,19 @@ export default function RootLayout({ children }) {
       type="application/ld+json"
       strategy="beforeInteractive"
       dangerouslySetInnerHTML={{
-        __html: JSON.stringify({
+        __html: JSON.stringify([
+          
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Zane Systems Global Services",  
+      "alternateName": "Zane Systems Limited",
+      "url": "https://zanesystemsgs.com"
+    },
+          {
           "@context": "https://schema.org",
           "@type": "Organization",
-          "name": "Zane Systems Limited",
+          "name": "Zane Systems Global Services",
           "alternateName": "Zane Systems",
           "url": "https://zanesystemsgs.com",
           "logo": "https://zanesystemsgs.com/favicon.ico",
@@ -100,7 +113,7 @@ export default function RootLayout({ children }) {
               "availableLanguage": "en"
             }
           ]
-        }),
+        }]),
       }}
     />
       </body>
