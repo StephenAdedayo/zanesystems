@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export default function Hamburger({setIsMenuOpen, menuOpen}) {
+export default function Hamburger({setIsMenuOpen, menuOpen, isScrolled}) {
 
   return (
     <button
@@ -10,21 +10,21 @@ export default function Hamburger({setIsMenuOpen, menuOpen}) {
     >
       {/* Top Line */}
       <span
-        className={`h-0.5 w-6 bg-white transition-all duration-200 ease-in-out ${
+        className={`h-0.5 w-6  ${isScrolled ? 'bg-black' : 'bg-white'} transition-all duration-200 ease-in-out ${
           menuOpen ? 'translate-y-2 rotate-45' : ''
         }`}
       />
       
       {/* Middle Line (Fades out) */}
       <span
-        className={`h-0.5 w-6 bg-white transition-all duration-200 ease-in-out ${
+        className={`h-0.5 w-6 ${isScrolled ? 'bg-black' : 'bg-white'} transition-all duration-200 ease-in-out ${
           menuOpen ? 'opacity-0' : ''
         }`}
       />
       
       {/* Bottom Line */}
       <span
-        className={`h-0.5 w-6 bg-white transition-all duration-200 ease-in-out ${
+        className={`h-0.5 w-6 ${isScrolled ? 'bg-black' : 'bg-white'} transition-all duration-200 ease-in-out ${
           menuOpen ? '-translate-y-2 -rotate-45' : ''
         }`}
       />

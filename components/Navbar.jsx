@@ -118,7 +118,7 @@ const Navbar = () => {
         </a>
 
         <div className="lg:hidden cursor-pointer block">
-          <Hamburger setIsMenuOpen={setIsMenuOpen} menuOpen={menuOpen}/>
+          <Hamburger setIsMenuOpen={setIsMenuOpen} menuOpen={menuOpen} isScrolled={isScrolled}/>
         </div>
       </div>
 
