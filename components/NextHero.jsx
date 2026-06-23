@@ -9,7 +9,7 @@ import React from "react";
 const NextHero = () => {
   return (
     <div className="my-20 px-5 md:px-16 lg:px-20">
-      <div className="flex md:items-center flex-col justify-center gap-3 mb-10">
+      <div className="flex md:items-cente flex-col justify-center gap-3 mb-16">
         <motion.div 
         initial={{y: 30, opacity : 0}}
         whileInView={{y : 0, opacity : 1}}
@@ -28,8 +28,8 @@ const NextHero = () => {
         whileInView={{opacity : 1}}
         viewport={{ once: true, amount: 0.2 }}
         transition={{type : "tween", duration: 0.4, delay : 0.2}}
-                className="font-ovo text-4xl text-brand-navy-deep leading-tight">
-            Strategic. Certified. <span className="text-brand-navy italic">Reliable.</span>
+                className="text-4xl text-brand-navy-deep leading-tight">
+            Strategic. Certified. <span className="text-brand-navy">Reliable.</span>
           </motion.h2>
       {/* <p className="text-lg md:text-center text-justify">
           <span className="text-brand-navy"></span>{" "}
@@ -40,7 +40,7 @@ const NextHero = () => {
         whileInView={{y : 0, opacity : 1}}
         viewport={{ once: true, amount: 0.2 }}
         transition={{type : "tween", duration: 0.5, delay : 0.3}}
-                className="md:text-center text-justify  text-sm text-gray-700/90">
+                className="md:text-cente text-justify  text-sm text-gray-700/90">
           We provide expert aircraft procurement and  {" "}
           certified <br /> parts sourcing, ensuring efficient and reliable supply chain
           solutions worldwide.
@@ -51,7 +51,7 @@ const NextHero = () => {
         </p> */}
       </div>
 
-      <div className="flex flex-col md:flex-row justify-between gap-10 items-center">
+      <div className="flex flex-col md:flex-row justify-between gap-10 items-start">
         <motion.div 
         initial={{ y:-20, opacity : 0}}
         whileInView={{y:0, opacity : 1}}
@@ -61,7 +61,7 @@ const NextHero = () => {
           <Image
             src={assets.leaders}
             alt="next_hero"
-            className="rounded-3xl hover:scale-105 transition-all ease-in duration-300"
+            className="rounded-3xl hover:scale-105 transition-all ease-in duration-500 delay-75"
           />
         </motion.div>
 
@@ -71,7 +71,7 @@ const NextHero = () => {
         viewport={{ once: true, amount: 0.2 }}
         transition={{type : "tween", duration: 0.6, delay : 0.3}}
         className="flex flex-col md:gap-8 gap-6 flex-[50%]">
-          <div className="flex items-center justify-between gap-2 text-brand-navy/80 bg-brand-navy/5 rounded-full xl:px-6 xl:py-3 px-3 py-1 text-center w-fit">
+          {/* <div className="flex items-center justify-between gap-2 text-brand-navy/80 bg-brand-navy/5 rounded-full xl:px-6 xl:py-3 px-3 py-1 text-center w-fit">
             <svg
               width="13"
               height="14"
@@ -85,12 +85,12 @@ const NextHero = () => {
                 strokeMiterlimit="5.759"
                 strokeLinecap="round"
               />
-            </svg>
-            <p className="xl:text-[26px] text-[15px] font-ovo font-semibold">
+            </svg> */}
+            <p className="xl:text-4xl text-brand-navy-deep font-ovo sm:text-2xl text-2xl text-balance">
               Leaders in Aviation Procurement
             </p>
-          </div>
-          <hr className="text-brand-navy-deep h-0.5 w-10" />
+          {/* </div> */}
+          <div className="bg-brand-navy h-0.5 w-18" />
           <p className="text-sm text-gray-700/90">
             Partner with us for aircraft acquisition,
             certified parts sourcing, and seamless supply chain coordination. We
@@ -101,14 +101,14 @@ const NextHero = () => {
       </div>
 
       {/* next image */}
-      <div className="flex flex-col-reverse md:flex-row justify-between gap-10 mt-10 items-center">
+      <div className="flex flex-col-reverse md:flex-row justify-between gap-10 mt-16 items-start">
         <motion.div 
         initial={{y: 30, opacity : 0}}
         whileInView={{y : 0, opacity : 1}}
         viewport={{ once: true, amount: 0.2 }}
         transition={{type : "tween", duration: 0.8, delay : 0.3}}
         className="flex flex-col md:gap-8 gap-6 flex-[50%]">
-          <div className="flex items-center justify-between gap-2 text-brand-navy/80 bg-brand-navy/5 rounded-full xl:px-6 xl:py-3 px-3 py-1 text-center w-fit">
+          {/* <div className="flex items-center justify-between gap-2 text-brand-navy/80 bg-brand-navy/5 rounded-full xl:px-6 xl:py-3 px-3 py-1 text-center w-fit">
             <svg
               width="13"
               height="14"
@@ -122,13 +122,13 @@ const NextHero = () => {
                 strokeMiterlimit="5.759"
                 strokeLinecap="round"
               />
-            </svg>
-            <p className="xl:text-[26px] text-[14px] font-ovo font-semibold">
+            </svg> */}
+            <p className="xl:text-4xl text-brand-navy-deep font-ovo sm:text-2xl text-2xl text-balance">
               Aircraft Parts at Competitive Value
             </p>
-          </div>
+          {/* </div> */}
 
-          <hr className="text-brand-navy-deep h-0.5 w-10" />
+          <div className="bg-brand-navy h-0.5 w-18" />
 
           <p className="text-sm text-gray-700/90">
             Best value achieved through strategic sourcing, trusted global
@@ -145,14 +145,14 @@ const NextHero = () => {
           <Image
             src={assets.pricing}
             alt="next_hero"
-            className="rounded-3xl hover:scale-105 transition-all ease-in duration-300 h-[70%]"
+            className="rounded-3xl hover:scale-105 transition-all ease-in duration-500 delay-75 h-[70%]"
           />
           
         </motion.div>
       </div>
 
       {/* next image */}
-      <div className="flex flex-col mt-10 md:flex-row justify-between gap-10 items-center">
+      <div className="flex flex-col mt-16 md:flex-row justify-between gap-10 items-start">
         <motion.div 
         initial={{ y:-20, opacity : 0}}
         whileInView={{y:0, opacity : 1}}
@@ -162,12 +162,12 @@ const NextHero = () => {
           <Image
             src={assets.nexthero_image}
             alt="next_hero"
-            className="rounded-3xl hover:scale-105 transition-all ease-in duration-300"
+            className="rounded-3xl hover:scale-105 transition-all ease-in duration-500 delay-75"
           />
         </motion.div>
 
         <motion.div className="flex flex-col md:gap-8 gap-6 flex-[50%]">
-          <div className="flex items-center justify-between gap-2 text-brand-navy/80 bg-brand-navy/5 rounded-full xl:px-6 xl:py-3 px-3 py-1 text-center w-fit">
+          {/* <div className="flex items-center justify-between gap-2 text-brand-navy/80 bg-brand-navy/5 rounded-full xl:px-6 xl:py-3 px-3 py-1 text-center w-fit">
             <svg
               width="13"
               height="14"
@@ -181,13 +181,13 @@ const NextHero = () => {
                 strokeMiterlimit="5.759"
                 strokeLinecap="round"
               />
-            </svg>
-            <p className="xl:text-[26px] text-[15px] font-ovo font-semibold">
+            </svg> */}
+            <p className="xl:text-4xl text-brand-navy-deep font-ovo sm:text-2xl text-2xl text-balance">
               Your Trust Powers Our Reputation
             </p>
-          </div>
+          {/* </div> */}
 
-          <hr className="text-brand-navy-deep h-0.5 w-10" />
+          <div className="bg-brand-navy h-0.5 w-18" />
 
           <p className="text-sm text-gray-700/90">
             Serving aviation operators, MRO providers, private owners, and

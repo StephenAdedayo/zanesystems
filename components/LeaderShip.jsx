@@ -31,7 +31,7 @@ export default function Leadership() {
           className="font-ovo text-4xl text-brand-navy-deep leading-tight mb-3"
         >
           Meet Our{" "}
-          <span className="text-brand-navy italic">Leadership</span>
+          <span className="text-brand-navy">Leadership</span>
         </motion.h2>
 
         <motion.p

@@ -37,7 +37,7 @@ const OurMission = () => {
         viewport={{ once: true, amount: 0.2 }}
         transition={{type : "tween", duration: 0.4, delay : 0.2}}
           className="font-ovo text-4xl text-brand-navy-deep mb-5 leading-tight">
-            Built on Trust. <span className="text-brand-navy italic">Driven by Precision</span>
+            Built on Trust. <span className="text-brand-navy ">Driven by Precision</span>
           </motion.h2>
           
 
@@ -71,7 +71,7 @@ const OurMission = () => {
         viewport={{ once: true, amount: 0.2 }}
         transition={{type : "tween", duration: 0.4, delay : 0.2}}
           className="border-l-2  border-brand-navy bg-brand-navy/5 px-4 py-4 mt-5">
-            <p className="italic font-ovo">
+            <p className="font-ovo">
               "We don't just supply parts. We supply the assurance that every
               aircraft we touch will fly safely."
             </p>

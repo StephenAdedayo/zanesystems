@@ -18,15 +18,15 @@ const Hero = () => {
         className="object-cover absolute inset-0 h-screen w-full"
       ></video>
 
-      <div className="absolute inset-0 bg-black/50 " />
+      <div className="absolute inset-0 bg-black/50"/>
 
 
-      <div className="absolute inset-0 space-y-8 px-5 md:px-16 lg:px-20 bottom-0 z-0 w-full flex flex-col justify-center items-center">
+      <div className="absolute inset-0 space-y-12 px-5 mt-20 md:px-16 lg:px-20 bottom-0 z-0 w-full flex flex-col justify-center">
         <motion.div 
         initial={{y: -20, opacity : 0}}
 animate={{ y: 0, opacity: 1 }} 
         transition={{type : "tween", duration: 0.2, delay : 0.1}}
-        className="flex gap-3 items-center bg-glass rounded-full mb-5 px-6 py-2">
+        className="flex gap-3 w-fit items-center bg-glass rounded-full mb-8 px-6 py-2">
           <p className="size-3 bg-white rounded-full animate-ping"></p>
           <h1 className="text-sm text-white">Zane Systems</h1>
         </motion.div>
@@ -35,14 +35,14 @@ animate={{ y: 0, opacity: 1 }}
         initial={{y: 30, opacity : 0}}
         animate={{ y: 0, opacity: 1 }} 
         transition={{type : "tween", duration: 0.3, delay : 0.2}}
-        className="text-white font-ovo text-center sm:text-3xl text-2xl max-xs:text-lg  md:text-5xl mb-5">
-          Your Global Partner in Aircraft Parts Supply
+        className="text-white font-ovo text-balance leading-relaxed sm:text-3xl text-2xl max-xs:text-lg  lg:text-5xl md:text-4xl mb-8">
+          Your Global Partner in Aircraft <br /> Parts Supply
         </motion.h1>
         <motion.p 
         initial={{y: 30, opacity : 0}}
 animate={{ y: 0, opacity: 1 }} 
         transition={{type : "tween", duration: 0.6, delay : 0.3}}
-        className="text-white/80 text-center text-sm md:text-base sm:w-150 w-full">
+        className="text-white/80 text-balance text-sm md:text-base sm:w-150 w-full">
           We deliver aircraft acquisition, certified parts sourcing, and
           seamless supply chain coordination for aviation stakeholders
           worldwide.

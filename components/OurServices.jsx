@@ -39,7 +39,7 @@ export default function OurServices() {
         transition={{type : "tween", duration: 0.4, delay : 0.2}} 
             className="font-ovo text-4xl text-brand-navy-deep leading-tight">
               Everything Your{" "}
-              <span className="text-brand-navy italic">Fleet Needs</span>
+              <span className="text-brand-navy">Fleet Needs</span>
             </motion.h2>
           </div>
           <motion.p 

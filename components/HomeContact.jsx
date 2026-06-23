@@ -8,39 +8,39 @@ import { motion } from "motion/react";
 
 const HomeContact = () => {
   return (
-    <div className="my-20 px-5 md:px-16 lg:px-20 w-full flex flex-col items-center justify-center">
-      <motion.div 
+    <div className="mb-20 mt-26 px-5 md:px-16 lg:px-20 w-full  flex flex-col md:items-center items-start justify-center">
+      {/* <motion.div 
         initial={{y: -20, opacity : 0}}
         whileInView={{y : 0, opacity : 1}}
         viewport={{ once: true, amount: 0.2 }}
-        transition={{type : "tween", duration: 0.6, delay : 0.3}}
-      className="flex items-center justify-between gap-2 text-brand-navy/80 bg-brand-navy/5 rounded-full xl:px-6 xl:py-3 px-3 py-1 text-center w-fit mb-10">
+        transition={{type : "tween", duration: 0.6, delay : 0.3}}>
+      className="flex items-center justify-between gap-2 text-brand-navy/80 bg-brand-navy/5 rounded-full xl:px-6 xl:py-3 px-3 py-1 text-center w-fit mb-10"
         <MdOutlineMarkEmailRead className="text-brand-navy" />
-        <h1 className="xl:text-[26px] font-ovo text-[15px] font-semibold">
+        <h1 className="xl:text-4xl mb-12  text-brand-navy sm:text-[32px] text-2xl font-semibold">
           Connect with Zane Systems
         </h1>
-      </motion.div>
+      </motion.div> */}
 
-      <div className="flex flex-col xl:gap-16 gap-10 w-full md:flex-row">
-        <motion.div 
-        initial={{y: 30, opacity : 0}}
+      <div className="flex flex-col gap-10 w-full md:flex-row ">
+         <motion.div 
+         initial={{y: 30, opacity : 0}}
         whileInView={{y : 0, opacity : 1}}
         viewport={{ once: true, amount: 0.2 }}
         transition={{type : "tween", duration: 0.6, delay : 0.4}}
-        className="flex flex-col flex-[50%] gap-5 text-center md:text-left">
-          <h2 className="bg-linear-to-r from-slate-800 to-slate-500 text-transparent bg-clip-text text-2xl font-outfit">
-            Reliable Aviation Solutions Begin Here
-          </h2>
-          <p className="text-gray  max-w-3xl text-sm md:text-[15px]">
-            Partner with a team dedicated to strategic procurement, certified
-            sourcing, and global supply coordination built around your
-            operational goals.
-          </p>
-        </motion.div>
+         className="flex flex-col w-full flex-[60%] justify-start pt-1">
+                        <div className="flex items-center gap-2.5 mb-6">
+                            <div className="size-2 rounded-full bg-brand-navy"></div>
+                            <span className="text-zinc-500 font-medium text-sm tracking-wide">CONTACT</span>
+                        </div>
+                        <h1 className="text-4xl font-medium text-brand-navy-deep mb-3 sm:mb-5">Let’s Start a Conversation</h1>
+                        <p className="text-base text-balance text-zinc-400 leading-relaxed max-w-105">
+                            Have a question or need help? Reach out and our team will get back to you as soon as possible.
+                        </p>
+                    </motion.div>
 
 
 
-      <Form className={"flex-[50%] w-full rounded-2xl md:py-10 py-8 md:px-14 sm:px-10 px-5"}/> 
+      <Form className={"flex-[40%] w-full rounded-2xl md:py-10 py-8 md:px-10 sm:px-8 px-5"}/> 
       </div>
     </div>
   );

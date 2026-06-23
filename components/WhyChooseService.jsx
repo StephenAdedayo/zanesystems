@@ -29,7 +29,7 @@ export default function WhyChooseService() {
         viewport={{ once: true, amount: 0.2 }}
         transition={{type : "tween", duration: 0.4, delay : 0.2}}
           className="font-ovo text-4xl text-brand-navy-deep leading-tight">
-            The <span className="text-brand-navy italic">Zane Advantage</span>
+            The <span className="text-brand-navy">Zane Advantage</span>
           </motion.h2>
         </div>
 

@@ -15,12 +15,12 @@ const AboutUsHero = () => {
              <Image src={assets.about_image} fill priority alt="about_image" className="object-center object-cover"/>
           </div>
 
-      <div className="bg-black/50 px-5 md:px-16 lg:px-20 absolute inset-0 flex flex-col items-center justify-center  text pt-10">
+      <div className="bg-black/50 px-5 md:px-16 mt-12 lg:px-20 absolute inset-0 flex flex-col justify-center text pt-10">
         <motion.div
         initial={{y: -20, opacity : 0}}
         animate={{y : 0, opacity : 1}}
         transition={{type : "tween", duration: 0.2, delay : 0.1}}
-         className="flex gap-3 items-center bg-glass rounded-full mb-5 px-6 py-2">
+         className="flex gap-3 items-center w-fit bg-glass rounded-full mb-8 px-6 py-2">
           <p className="size-3 bg-white rounded-full animate-ping"></p>
           <h1 className="text-sm text-white ">About Us</h1>
         </motion.div>
@@ -29,14 +29,14 @@ const AboutUsHero = () => {
                 initial={{y: 30, opacity : 0}}
         animate={{y : 0, opacity : 1}}
         transition={{type : "tween", duration: 0.3, delay : 0.2}}
-        className="text-white font-ovo text-center sm:text-3xl text-2xl max-xs:text-lg  md:text-5xl mb-5">
+        className="text-white font-ovo text-balance leading-relaxed sm:text-3xl text-2xl max-xs:text-lg  lg:text-5xl md:text-4xl mb-8">
           Strengthening Aviation Through Strategic Procurement
         </motion.h1>
         <motion.p
          initial={{y: 30, opacity : 0}}
         animate={{y : 0, opacity : 1}}
         transition={{type : "tween", duration: 0.6, delay : 0.3}}
-        className="text-white/80 text-center text-sm mb-5 md:text-base sm:w-150 w-full">
+        className="text-white/80 text-sm text-balance mb-8 leading-relaxed md:text-base sm:w-150 w-full">
           We are a strategic aviation procurement and supply
           chain partner committed to delivering reliable, compliant, and
           globally connected solutions.

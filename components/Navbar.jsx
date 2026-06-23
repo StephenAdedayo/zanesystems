@@ -9,6 +9,7 @@ import React, { useEffect, useState } from "react";
 import { BsWhatsapp } from "react-icons/bs";
 import { FaPhoneAlt } from "react-icons/fa";
 import { LiaTimesSolid } from "react-icons/lia";
+import Hamburger from "./Hamburger";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -43,7 +44,7 @@ const Navbar = () => {
 
   return (
     <section
-      className={`px-5 md:px-16 lg:px-20 fixed text-black sm:py-5 py-3 ${isScrolled ? "text-black bg-white backdrop-blur-3xl shadow" : "text-white "} flex items-center justify-between w-full z-40  transition-all duration-300`}
+      className={`px-5 md:px-16 lg:px-20 fixed text-black sm:py-4 py-3 ${isScrolled ? "text-black bg-white backdrop-blur-3xl shadow" : "text-white "} flex items-center justify-between w-full z-40  transition-all duration-300`}
     >
       {/* logo */}
       <Link href={"/"}>
@@ -51,10 +52,10 @@ const Navbar = () => {
           ZANE {" "} <span className="text-brand-navy font-bold italic">SYSTEMS</span> 
         </p> */}
         {isScrolled ? (
-         <Image src={assets.zane_logo} alt="Zane Systems Logo" className={`${isScrolled ? "" : ""} brightness-200 contrast-200 w-16 `} priority/>
+         <Image src={assets.zane_logo} alt="Zane Systems Logo" className={`${isScrolled ? "" : ""} brightness-200 contrast-200 w-12 h-12 `} priority/>
         
         ) : (
-          <Image src={assets.zane_logo_white} alt="Zane Systems Logo" className={`w-16`} priority/>
+          <Image src={assets.zane_logo_white} alt="Zane Systems Logo" className={`w-12 h-12`} priority/>
         
         )}
         
@@ -67,7 +68,7 @@ const Navbar = () => {
           <Link
             key={index}
             href={link.href}
-            className="group flex flex-col gap-0.5"
+            className="group flex flex-col text-[15px] gap-0.5"
           >
             {link.name}
             <div
@@ -109,28 +110,26 @@ const Navbar = () => {
           >
             <FaPhoneAlt color="white" className="text-20 sm:text-24" />
             <p
-              className={`${!isScrolled && "font-semibold"} sm:block hidden md:text-sm text-base text-white`}
+              className={`${!isScrolled && "font-semibold"} sm:block text-xs hidden  text-white`}
             >
               +234 8132421458
             </p>
           </div>
         </a>
 
-        <div onClick={() => setIsMenuOpen(true)} className="lg:hidden cursor-pointer block">
-          <Menu size={24} color={`${isScrolled ? "black" : "white"}`} />
+        <div className="lg:hidden cursor-pointer block">
+          <Hamburger setIsMenuOpen={setIsMenuOpen} menuOpen={menuOpen}/>
         </div>
       </div>
 
       {/* mobile screens */}
       <div
-        className={`fixed top-0 h-screen right-0  ${menuOpen ? "w-full px-10 " : "w-0 overflow-hidden"} transition-all duration-300 bg-nav z-50 block lg:hidden`}
+        className={`fixed top-0 h-screen right-0  ${menuOpen ? "w-full px-10 " : "w-0 overflow-hidden"} transition-all duration-300 bg-nav flex flex-col items-center justify-center z-50  lg:hidden`}
       >
-        {/* <h2 className="text-3xl text-white font-semibold uppercase text-center mt-20 mb-10">
-          Zane Systems
-        </h2> */}
 
-        <div className="font-ovo mt-20 mb-10 cursor-pointer flex items-center justify-center">
-<Image src={assets.zane_logo_white} alt="Zane Systems Logo" className={"w-20"} />        
+
+        <div className="absolute top-5 left-5  cursor-pointer">
+<Image src={assets.zane_logo_white} alt="Zane Systems Logo" className={"w-12.5"} />        
 
 </div>
 
@@ -141,7 +140,7 @@ const Navbar = () => {
               href={link.href}
               className="group  flex flex-col gap-0.5"
             >
-              <p className="hover:translate-x-2 text-white transform transition-transform duration-300">
+              <p className="hover:translate-x-2  text-white transform transition-transform duration-300">
                 {link.name}
               </p>
             </Link>
@@ -149,17 +148,20 @@ const Navbar = () => {
         </div>
 
        <a href="tel:+234 8132421458">
-        <div className="bg-gray flex items-center gap-5 justify-center py-4 rounded-md mt-10">
+        <div className="bg-gray flex items-center gap-5 justify-center px-6 py-3 rounded-md mt-18">
           <FaPhoneAlt size={24} color="white" />
-          <p className={`text-white`}>+234 8132421458</p>
+          <p className={`text-white text-sm`}>+234 8132421458</p>
         </div>
         </a>
 
+
         <div
           onClick={() => setIsMenuOpen(false)}
-          className="absolute top-5 cursor-pointer right-8"
+          className="absolute top-5 cursor-pointer right-5"
         >
-          <LiaTimesSolid size={30} color="white" />
+          {/* <LiaTimesSolid size={30} color="white" /> */}
+          <Hamburger setIsMenuOpen={setIsMenuOpen} menuOpen={menuOpen}/>
+
         </div>
       </div>
     </section>

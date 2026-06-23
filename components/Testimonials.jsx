@@ -58,7 +58,7 @@ const Testimonials = () => {
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ type: "tween", duration: 0.6, delay: 0.3 }}
-              className="text-neutral-900 font-medium text-4xl md:text-[40px] text-center md:text-left"
+              className="text-neutral-900 font-medium text-4xl md:text-[40px] text-start md:text-left"
             >
               What our clients appreciate most
             </motion.h1>

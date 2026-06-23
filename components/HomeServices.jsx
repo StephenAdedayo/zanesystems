@@ -11,7 +11,7 @@ import { motion } from "motion/react";
 const HomeServices = () => {
   return (
     <div className="px-5 md:px-16 lg:px-20 my-20 flex items-start flex-col justify-center">
-      <motion.div 
+      {/* <motion.div 
      initial={{y: -30, opacity : 0}}
         whileInView={{y : 0, opacity : 1}}
         viewport={{ once: true, amount: 0.2 }}
@@ -30,15 +30,15 @@ const HomeServices = () => {
             strokeMiterlimit="5.759"
             strokeLinecap="round"
           />
-        </svg>
-        <h1 className="xl:text-[26px] font-ovo text-[15px] font-semibold">Our Aviation Services</h1>
-      </motion.div>
+        </svg> */}
+        <h1 className="xl:text-4xl  text-brand-navy-deep sm:text-[32px] text-3xl font-semibold">Our Aviation Services</h1>
+      {/* </motion.div> */}
       <motion.p 
       initial={{y: 30, opacity : 0}}
         whileInView={{y : 0, opacity : 1}}
         viewport={{ once: true, amount: 0.2 }}
         transition={{type : "tween", duration: 0.6, delay : 0.3}}
-      className="text-sm text-gray-700/90 mt-5 ">
+      className="text-sm text-gray-700/90 mt-5 text-balance w-full max-w-xl">
         Comprehensive procurement and supply chain solutions designed to support
         safe, efficient, and compliant aviation operations worldwide.
       </motion.p>
@@ -54,11 +54,11 @@ const HomeServices = () => {
         transition={{type : "tween", duration: 0.6, delay : 0.3}}>
                 <Link
                   href={`/services/${service.slug}`}
-                  className="group relative block rounded-2xl border border-zinc-200 overflow-hidden transition-all duration-300 hover:-translate-y-1 "
+                  className="group relative block rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 "
                   style={{
                     background: "rgba(255, 255, 255, 0.55)",
-                    // border: "1px solid rgba(255, 255, 255, 0.75)",
-                    // borderColor: "rgba(20,81,110,0.45)",
+                    border: "1px solid rgba(255, 255, 255, 0.75)",
+                    borderColor: "rgba(20,81,110,0.45)",
                     boxShadow: "0 4px 24px rgba(0,0,0,0.06)",
                     backdropFilter: "blur(16px)",
                     WebkitBackdropFilter: "blur(16px)",

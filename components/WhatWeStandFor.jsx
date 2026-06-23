@@ -26,7 +26,7 @@ const WhatWeStandFor = () => {
         viewport={{ once: true, amount: 0.2 }}
         transition={{type : "tween", duration: 0.4, delay : 0.2}} 
         className="font-ovo text-4xl text-brand-navy-deep sm:mb-0 mb-3 leading-tight">
-            Our Core <span className="text-brand-navy italic">Values</span>
+            Our Core <span className="text-brand-navy">Values</span>
           </motion.h2>
         <motion.p 
                         initial={{y:-20, opacity : 0}}
@@ -39,7 +39,7 @@ const WhatWeStandFor = () => {
         </motion.p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-10">
         {coreValues.map((value, index) => (
           <motion.div
         initial={{y:30, opacity : 0}}
@@ -47,7 +47,7 @@ const WhatWeStandFor = () => {
         viewport={{ once: true, amount: 0.2 }}
         transition={{type : "tween", duration: 0.6, delay : 0.3}}
             key={index}
-            className="relative rounded-xl bg-white/60 backdrop-blur-2xl p-6 transition-transform duration-300 hover:-translate-y-2"
+            className="relative rounded-xl bg-white/60 backdrop-blur-2xl p-6 sm:w-full sm:max-w-80 w-full transition-transform duration-300 hover:-translate-y-2"
             style={{
               // background: "rgba(255, 255, 255, 0.55)",
               border: "1px solid rgba(255, 255, 255, 0.75)",

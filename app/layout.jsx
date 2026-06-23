@@ -1,4 +1,4 @@
-import {  Nunito, Outfit, Ovo, Libre_Baskerville, Nunito_Sans } from "next/font/google";
+import { Libre_Baskerville, Nunito_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -6,19 +6,16 @@ import { Toaster } from "react-hot-toast";
 import Script from "next/script";
 
 const nunito = Nunito_Sans({
-  subsets: ["latin"], weight : ["400", "500", "600", "700"],
-  variable : "--font-outfit"
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-outfit",
 });
 
 const ovo = Libre_Baskerville({
-  subsets: ["latin"], weight : ["400"],
-  variable : "--font-ovo"
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-ovo",
 });
-
-// export const metadata = {
-//   title: "Zane Systems | Aircraft Procurement & Aviation Solutions",
-//   description: "Global aircraft sales, parts sourcing, and strategic aviation solutions specializing in precision and excellence.",
-// };
 
 export const metadata = {
   metadataBase: new URL("https://zanesystemsgs.com"),
@@ -27,8 +24,15 @@ export const metadata = {
     template: "%s | Zane Systems",
   },
   applicationName: "Zane Systems",
-  description: "Zane Systems Limited is a strategic aviation procurement partner specializing in aircraft sales, certified parts sourcing, and global supply chain logistics.",
-  keywords: ["Aviation", "Aircraft Procurement", "Parts Sourcing", "Zane Systems", "Aircraft Sales"],
+  description:
+    "Zane Systems Limited is a strategic aviation procurement partner specializing in aircraft sales, certified parts sourcing, and global supply chain logistics.",
+  keywords: [
+    "Aviation",
+    "Aircraft Procurement",
+    "Parts Sourcing",
+    "Zane Systems",
+    "Aircraft Sales",
+  ],
 
   alternates: {
     canonical: "https://zanesystemsgs.com",
@@ -36,7 +40,8 @@ export const metadata = {
 
   openGraph: {
     title: "Zane Systems Global Services",
-    description: "Strategic aircraft procurement and meticulous supply chain coordination.",
+    description:
+      "Strategic aircraft procurement and meticulous supply chain coordination.",
     url: "https://zanesystemsgs.com",
     siteName: "Zane Systems",
     locale: "en_US",
@@ -45,7 +50,8 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Zane Systems | Global Aviation Solutions",
-    description: "Strategic aircraft procurement and meticulous supply chain coordination.",
+    description:
+      "Strategic aircraft procurement and meticulous supply chain coordination.",
   },
   robots: {
     index: true,
@@ -53,69 +59,65 @@ export const metadata = {
     googleBot: {
       index: true,
       follow: true,
-    }
+    },
   },
 };
-
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${nunito.variable} ${ovo.variable} antialiased leading-8`}>
-          <Toaster />
-                <Navbar />
-         <main className="min-h-screen">
-          {children}
-
-         </main>
+        className={`${nunito.variable} ${ovo.variable} antialiased leading-8`}
+      >
+        <Toaster />
+        <Navbar />
+        <main className="min-h-screen">{children}</main>
         <Footer />
 
-        {/* 🚀 Optimized Structured Data */}
-    <Script
-      id="structured-data"
-      type="application/ld+json"
-      strategy="beforeInteractive"
-      dangerouslySetInnerHTML={{
-        __html: JSON.stringify([
-          
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Zane Systems Global Services",  
-      "alternateName": "Zane Systems Limited",
-      "url": "https://zanesystemsgs.com"
-    },
-          {
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "Zane Systems Global Services",
-          "alternateName": "Zane Systems",
-          "url": "https://zanesystemsgs.com",
-          "logo": "https://zanesystemsgs.com/favicon.ico",
-          "address": {
-            "@type": "PostalAddress",
-            "addressCountry": "NG"
-          },
-          "contactPoint": [
-            {
-              "@type": "ContactPoint",
-              "telephone": "+234 8132421458",
-              "contactType": "customer service",
-              "email": "info@zanesystemsgs.com",
-              "availableLanguage": "en"
-            },
-            {
-              "@type": "ContactPoint",
-              "telephone": "+234 8132421458",
-              "contactType": "sales",
-              "email": "info@zanesystemsgs.com",
-              "availableLanguage": "en"
-            }
-          ]
-        }]),
-      }}
-    />
+        <Script
+          id="structured-data"
+          type="application/ld+json"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify([
+              {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                name: "Zane Systems Global Services",
+                alternateName: "Zane Systems Limited",
+                url: "https://zanesystemsgs.com",
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                name: "Zane Systems Global Services",
+                alternateName: "Zane Systems",
+                url: "https://zanesystemsgs.com",
+                logo: "https://zanesystemsgs.com/favicon.ico",
+                address: {
+                  "@type": "PostalAddress",
+                  addressCountry: "NG",
+                },
+                contactPoint: [
+                  {
+                    "@type": "ContactPoint",
+                    telephone: "+234 8132421458",
+                    contactType: "customer service",
+                    email: "info@zanesystemsgs.com",
+                    availableLanguage: "en",
+                  },
+                  {
+                    "@type": "ContactPoint",
+                    telephone: "+234 8132421458",
+                    contactType: "sales",
+                    email: "info@zanesystemsgs.com",
+                    availableLanguage: "en",
+                  },
+                ],
+              },
+            ]),
+          }}
+        />
       </body>
     </html>
   );
